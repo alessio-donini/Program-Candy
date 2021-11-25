@@ -21,5 +21,9 @@ namespace Candy.Pages
         {
 
         }
+        public string Ciao()
+        {
+            return "ciao";
+        }
     }
 }

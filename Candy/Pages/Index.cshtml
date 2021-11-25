@@ -6,5 +6,27 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <p><a asp-page="/Prova">Clicca qui</a></p>
+    <p><a asp-page="/Prova">Clicca qui @Model.Ciao()</a></p> <!-- @Model.Ciao() serve per chiamare la funzione ciao della classe IndexModel -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Un piccolo esperimento
+    @{ for (var i = 0; i < 10; i++)
+        {
+            int prova = i + 1;
+        <p>Ciao @prova @Model.Ciao()</p>
+        }
+     }-->
 </div>
