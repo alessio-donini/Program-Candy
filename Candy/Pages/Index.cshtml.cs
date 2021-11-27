@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Candy.Pages
 {
@@ -38,6 +39,8 @@ namespace Candy.Pages
         public string Prova(int n)
         {
             Random r = new Random();
+            Prova p = new Prova();
+            p.CreateFile("C:\\Users\\Mattia\\Documents\\GitHub\\Program-Candy\\Candy\\prova.txt");
             return (n * r.Next(0, 1000)).ToString();
         }
     }
