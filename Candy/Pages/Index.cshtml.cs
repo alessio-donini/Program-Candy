@@ -25,5 +25,20 @@ namespace Candy.Pages
         {
             return "ciao";
         }
+        public string Disponibilità()
+        {
+            Random r = new Random();
+            int n = r.Next(0, 2);
+            if(n != 0)
+            {
+                return $"{n}";
+            }
+            return "Esaurito";
+        }
+        public string Prova(int n)
+        {
+            Random r = new Random();
+            return (n * r.Next(0, 1000)).ToString();
+        }
     }
 }
