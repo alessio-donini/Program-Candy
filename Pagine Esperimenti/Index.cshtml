@@ -4,9 +4,21 @@
     ViewData["Title"] = "Home page";
 }
 <div class="text-center">
+    <!--<h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> -->
+    <!--<p><a asp-page="/Prova">Clicca qui @Model.Ciao()</a></p>--> <!-- @Model.Ciao() serve per chiamare la funzione ciao della classe IndexModel -->
+    <!--<p>Prodotto: @Model.Disponibilità2()</p>
+    <p>Risultato: @Model.Prova(5)</p>-->
+    <!-- Un piccolo esperimento
+    @{ for (var i = 0; i < 10; i++)
+        {
+            int prova = i + 1;
+        <p>Ciao @prova @Model.Ciao()</p>
+        }
+     }-->
     <div class="row">
         <div class="col-12 col-md-6 col-lg-3 caramella">
-            <a asp-page="/Prodotto" asp-route-ID="caramella_rossa"><img class="caramellaimg" src="~/images/caramella-spiro-fucsia-cm-40x82x10-h.jpg" /></a>
+            <a asp-page="/Prova" asp-route="caramella_rossa"><img class="caramellaimg" src="~/images/caramella-spiro-fucsia-cm-40x82x10-h.jpg" /></a>
             Caramella Rossa
             @{ Disp(1); }
         </div>
