@@ -18,35 +18,6 @@ namespace Candy.Pages
             _logger = logger;
         }
 
-        public void OnGet()
-        {
-
-        }
-        public string Ciao()
-        {
-            return "ciao";
-        }
-        public string Disponibilità2()
-        {
-            Random r = new Random();
-            int n = r.Next(0, 2);
-            if(n != 0)
-            {
-                return $"{n}";
-            }
-            return "Esaurito";
-        }
-        public string Prova(int n)
-        {
-            Random r = new Random();
-            System.IO.File.Create(AppDomain.CurrentDomain.BaseDirectory + "prova.txt").Dispose();
-            return (n * r.Next(0, 1000)).ToString();
-        }
-        public bool Disponibilità(int i)
-        {
-            if (i == 0)
-                return true;
-            return false;
-        }
+        public void OnGet() { }
     }
 }
