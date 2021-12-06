@@ -7,5 +7,20 @@ namespace Candy
 {
     public class Magazzino
     {
+        public Magazzino()
+        {
+        }
+        public void TogliProdotto()
+        {
+        }
+        public void AggiungiProdottoCarrello()
+        {
+        }
+        public void TogliProdottoCarrello()
+        {
+        }
+        public void Disponibilità()
+        {
+        }
     }
 }

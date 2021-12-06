@@ -7,5 +7,8 @@ namespace Candy
 {
     public class Prodotto : Magazzino
     {
+        public Prodotto()
+        {
+        }
     }
 }
