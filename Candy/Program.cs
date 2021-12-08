@@ -11,6 +11,8 @@ namespace Candy
 {
     public class Program
     {
+        public static List<Prodotto> products = new List<Prodotto>();
+        public static bool modifiedProducts = true;
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();

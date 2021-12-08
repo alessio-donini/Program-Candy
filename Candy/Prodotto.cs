@@ -7,6 +7,9 @@ namespace Candy
 {
     public class Prodotto : Magazzino
     {
+        public string nome { get; set; }
+        public int quantita { get; set; }
+        public double prezzo { get; set; }
         public Prodotto()
         {
         }

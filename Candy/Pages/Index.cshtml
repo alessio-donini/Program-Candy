@@ -17,6 +17,11 @@
                     }
                 </div>
             }
+            if (Program.modifiedProducts)
+            {
+                Program.products.Add(new Prodotto { nome = "pomodoro", quantita = 200, prezzo = 3.99 });
+                Program.modifiedProducts = false;
+            }
         }
     </div>
 </div>
