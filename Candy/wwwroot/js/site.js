@@ -2,3 +2,7 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your Javascript code.
+/*const prodotti = [];
+function AddProduct(product) {
+    prodotti.push(product);
+}*/
