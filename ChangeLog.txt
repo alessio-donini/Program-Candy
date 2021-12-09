@@ -1,1 +1,2 @@
 Creation file program (27/10/2021)
+Design navbar, addition logo, shopping cart and admin icons (3/12/2021)
