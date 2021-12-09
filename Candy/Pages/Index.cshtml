@@ -6,21 +6,22 @@
 <div class="text-center">
     <div class="row">
         @{
-            string[] caramelle = new string[4] {"Caramella Rossa", "Caramella Verde", "Caramella Blu", "Caramella Gialla" };
-            for (int i = 0; i < caramelle.Length; i++)
-            {
-                <div class="col-12 col-md-6 col-lg-3 caramella">
-                    <a asp-page="/Prodotto" asp-route-ID=@Model.FormatCandy(caramelle[i])><img class="caramellaimg" src="~/images/caramella.jpg" /></a>
-                    @caramelle[i]
-                    @{
-                        Disp(0);
-                    }
-                </div>
-            }
             if (Program.modifiedProducts)
             {
-                Program.products.Add(new Prodotto { nome = "pomodoro", quantita = 200, prezzo = 3.99 });
+                //Program.products.Add(new Prodotto { nome = "pomodoro", quantita = 200, prezzo = 3.99 });
                 Program.modifiedProducts = false;
+            }
+            for (int i = 0; i < Program.products.Count; i++)
+            {
+                <div class="col-12 col-md-6 col-lg-3 caramella">
+                            <a asp-page="/Prodotto" asp-route-ID=@Program.products[i].nome>
+                                <img class="img-fluid caramellaimg" src="~/images/@Program.p.FormatCandy(Program.products[i].nome)" />
+                                <p>@Program.products[i].nome</p>
+                                @{
+                                    Disp(0);
+                                }
+                            </a>
+                </div>
             }
         }
     </div>

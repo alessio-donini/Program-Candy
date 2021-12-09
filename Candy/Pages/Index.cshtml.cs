@@ -19,11 +19,5 @@ namespace Candy.Pages
         }
 
         public void OnGet() { }
-        public string FormatCandy(string candy)
-        {
-            string[] tmp = candy.Split(' ');
-            candy = $"{tmp[0].ToLower()}_{tmp[1].ToLower()}";
-            return candy;
-        }
     }
 }

@@ -15,9 +15,10 @@ namespace Candy
         public static List<Prodotto> products = new List<Prodotto>();
         public static bool modifiedProducts = true;
         public static string path = AppDomain.CurrentDomain.BaseDirectory + "Magazzino.txt";
+        public static Prodotto p = new Prodotto();
         public static void Main(string[] args)
         {
-            GetList();
+            p.Disponibilità(ref products, ref path, ref modifiedProducts);
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -27,15 +28,5 @@ namespace Candy
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-        private static void GetList()
-        {
-            List<string> lines = new List<string>();
-            lines = File.ReadAllLines(path).ToList();
-            foreach (string line in lines)
-            {
-                string[] item = line.Split(',');
-                products.Add(new Prodotto { nome = item[0], quantita = Convert.ToInt32(item[1]), prezzo = Convert.ToDouble(item[2]) });
-            }
-        }
     }
 }

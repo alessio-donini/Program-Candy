@@ -15,9 +15,16 @@ namespace Candy.Pages
         {
             this.id = id;
         }
-        public string GetList()
+        public string ProductData()
         {
-            return $"Nome: {Program.products[0].nome} Quantità: {Program.products[0].quantita} Prezzo: {Program.products[0].prezzo} euro";
+            for(int i = 0; i < Program.products.Count; i++)
+            {
+                if(Program.products[i].nome == id)
+                {
+                    return $"Nome: {Program.products[i].nome} Quantità: {Program.products[i].quantita} Prezzo: {Program.products[i].prezzo} euro";
+                }
+            }
+            return "Prodotto non trovato";
         }
     }
 }
