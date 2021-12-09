@@ -3,9 +3,24 @@
 @{
 }
 @* su @page -> "{id}" per vsualizzare sul link l'id del parametro, questo inoltre sarà necessario per visualizzare la
-    pagina *@
-<div class="text-center">
+    pagina
+
     <h1 class="display-4">Pagina del prodotto</h1>
     <p>valore passato per parametro alla pagina: @Model.id</p>
-    <p>Vediamo se funziona: @Model.ProductData()</p>
+    <p>Vediamo se funziona: @Model.ProductData()</p> *@
+<div class="">
+    <div class="row">
+        <div class="col-12 col-lg-6 caramella">
+            <img class="img-fluid prodottoimg" src="~/images/@Program.p.FormatCandy(Program.products[0].nome)" />
+        </div>
+        <div class="col-12 col-lg-6 caramella">
+            <div class="row informazioni nomeprodotto">
+                <h1>@Program.products[0].nome</h1>
+            </div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+        </div>
+    </div>
 </div>

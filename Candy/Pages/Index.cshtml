@@ -8,19 +8,17 @@
         @{
             if (Program.modifiedProducts)
             {
-                //Program.products.Add(new Prodotto { nome = "pomodoro", quantita = 200, prezzo = 3.99 });
                 Program.modifiedProducts = false;
             }
             for (int i = 0; i < Program.products.Count; i++)
             {
                 <div class="col-12 col-md-6 col-lg-3 caramella">
-                            <a asp-page="/Prodotto" asp-route-ID=@Program.products[i].nome>
-                                <img class="img-fluid caramellaimg" src="~/images/@Program.p.FormatCandy(Program.products[i].nome)" />
-                                <p>@Program.products[i].nome</p>
-                                @{
-                                    Disp(0);
-                                }
-                            </a>
+                    <a asp-page="/Prodotto" asp-route-ID=@Program.products[i].nome>
+                    <img class="img-fluid caramellaimg" src="~/images/@Program.p.FormatCandy(Program.products[i].nome)" />
+                    @{
+                        Disp(@Program.products[i]);
+                    }
+                    </a>
                 </div>
             }
         }
@@ -28,11 +26,13 @@
 </div>
 
 @{
-    void Disp(int i)
+    void Disp(Prodotto prod)
     {
-        if (true)
+        if (prod.quantita > 0)
         {
-            <p>Prodotto</p>
+            <p>@prod.nome<br/>
+               @prod.prezzo€
+            </p>
         }
         else
         {
