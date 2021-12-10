@@ -23,8 +23,22 @@ img {
     width: 100%;
     height: 500px;
 }
-.informazioni {
+.btnQuant {
+    font-family: 'Bungee', cursive;
+}
+.btnMeno {
+    background-color: #D600BF;
     text-align: center;
+    color: #FF8A00;
+    font-size: 35px;
+    padding: 0px 0px 0px 0px;
+}
+.btnPiu {
+    text-align: center;
+    background-color: #FF8A00;
+    color: #D600BF;
+    font-size: 35px;
+    padding: 0;
 }
 
 @media screen and (max-width: 321px) { /* XXS --> iPhone 5/SE */
@@ -49,6 +63,10 @@ img {
 
     .adminimg {
         max-width: 40px;
+    }
+    .nomeProdotto {
+        font-size: 50px;
+        margin-bottom: 5%;
     }
 }
 @media screen and (min-width: 576px) { /* SM */
@@ -76,6 +94,10 @@ img {
     .adminimg {
         max-width: 57px;
     }
+    .nomeProdotto {
+        font-size: 70px;
+        margin-bottom: 4%;
+    }
 }
 @media screen and (min-width: 992px) { /* LG */
     .logoimg {
@@ -89,6 +111,17 @@ img {
 
     .adminimg {
         max-width: 75px;
+    }
+    .nomeProdotto {
+        font-size: 60px;
+        margin-bottom: 6%;
+    }
+    .sezioneAcquisto {
+        margin-top: 15%;
+    }
+    .btnQuant {
+        width: 50px;
+        height: 50px;
     }
 }
 @media screen and (min-width: 1200px) { /* XL */

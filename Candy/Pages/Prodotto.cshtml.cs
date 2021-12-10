@@ -9,22 +9,25 @@ namespace Candy.Pages
 {
     public class ProvaModel : PageModel
     {
-        public string id;
-        public string prova;
+        public string idProdotto;
+        public int quant;
+        public double prez;
+        public string imgProdotto;
         public void OnGet(string id)
         {
-            this.id = id;
+            this.idProdotto = id;
         }
-        public string ProductData()
+        public void ProductData()
         {
             for(int i = 0; i < Program.products.Count; i++)
             {
-                if(Program.products[i].nome == id)
+                if(Program.products[i].nome == idProdotto)
                 {
-                    return $"Nome: {Program.products[i].nome} Quantità: {Program.products[i].quantita} Prezzo: {Program.products[i].prezzo} euro";
+                    quant = Program.products[i].quantita;
+                    prez = Program.products[i].prezzo;
+                    imgProdotto = Program.p.FormatCandy(idProdotto);
                 }
             }
-            return "Prodotto non trovato";
         }
     }
 }
