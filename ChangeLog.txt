@@ -1,2 +1,3 @@
 Creation file program (27/10/2021)
 Design navbar, addition logo, shopping cart and admin icons (3/12/2021)
+Update of the candy list, add of an algorithm for when a product changes it data in order to always keep the list updated (9/12/2021)
