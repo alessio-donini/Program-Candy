@@ -30,14 +30,14 @@ img {
     background-color: #D600BF;
     text-align: center;
     color: #FF8A00;
-    font-size: 35px;
-    padding: 0px 0px 0px 0px;
+    font-size: 33px;
+    padding: 0;
 }
 .btnPiu {
     text-align: center;
     background-color: #FF8A00;
     color: #D600BF;
-    font-size: 35px;
+    font-size: 33px;
     padding: 0;
 }
 
@@ -98,6 +98,11 @@ img {
         font-size: 70px;
         margin-bottom: 4%;
     }
+    .textQuant {
+        margin-left: 1%;
+        margin-right: 3%;
+        padding-top: 2%;
+    }
 }
 @media screen and (min-width: 992px) { /* LG */
     .logoimg {
@@ -122,6 +127,7 @@ img {
     .btnQuant {
         width: 50px;
         height: 50px;
+        border-radius: 20%;
     }
 }
 @media screen and (min-width: 1200px) { /* XL */
