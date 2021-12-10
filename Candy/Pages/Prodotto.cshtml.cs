@@ -13,11 +13,12 @@ namespace Candy.Pages
         public int quant;
         public double prez;
         public string imgProdotto;
+        public int prova = 0;
         public void OnGet(string id)
         {
             this.idProdotto = id;
         }
-        public void ProductData()
+        public void GetProductData()
         {
             for(int i = 0; i < Program.products.Count; i++)
             {
@@ -28,6 +29,10 @@ namespace Candy.Pages
                     imgProdotto = Program.p.FormatCandy(idProdotto);
                 }
             }
+        }
+        public int aumenta()
+        {
+            return this.prova++;
         }
     }
 }

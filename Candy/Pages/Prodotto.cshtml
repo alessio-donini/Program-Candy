@@ -10,7 +10,7 @@
     <p>valore passato per parametro alla pagina: @Model.id</p>
     <p>Vediamo se funziona: @Model.ProductData()</p> *@
 <div class="text-center">
-    @{ Program.UpdateList(); Model.ProductData(); }
+    @{ Program.UpdateList(); Model.GetProductData(); }
     <div class="row">
         <div class="col-12 col-lg-6 caramella">
             <img class="img-fluid prodottoimg" src="~/images/@Model.imgProdotto" />
@@ -28,7 +28,9 @@
             <div class="row sezioneAcquisto">
                 <div class="col-4 d-flex justify-content-lg-start">
                     <button class="btn btnQuant btnMeno">-</button>
-                    <div class="textQuant">Quantità: </div>
+                    <div class="textQuant">Quantità: 
+                        <div class="prodquant">@Model.prova</div>
+                    </div>
                     <button class="btn btnQuant btnPiu">+</button>
                 </div>
                 <div class="btnCompra">
@@ -39,3 +41,12 @@
         </div>
     </div>
 </div>
+@section Scripts
+{
+    <script>
+    function RazorFunction() {
+        $(".prodquant").html('@Model.aumenta()');
+    }
+
+    </script>
+} 
