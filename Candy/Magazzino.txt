@@ -1,0 +1,24 @@
+Orsetti|0|5,99
+Coccodrilli|100|5,99
+Fragole|100|5,99
+Coca Cole|100|5,99
+Rotelle|100|5,99
+Marshmellow|100|5,99
+Uova|100|5,99
+Angurie|100|5,99
+Cervelli|100|5,99
+Dentiere|100|5,99
+Delfini|100|5,99
+Vermi|100|5,99
+Banane|100|5,99
+Rane|100|5,99
+Teschi|100|5,99
+Pesche|100|5,99
+Burger|100|5,99
+Jelly Beans|100|5,99
+Zucche|100|5,99
+Occhi|100|5,99
+Ossa|100|5,99
+Ciliegie|100|5,99
+Puffi|100|5,99
+More|100|5,99
