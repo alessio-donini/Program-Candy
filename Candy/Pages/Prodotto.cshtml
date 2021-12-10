@@ -28,25 +28,14 @@
             <div class="row sezioneAcquisto">
                 <div class="col-4 d-flex justify-content-lg-start">
                     <button class="btn btnQuant btnMeno">-</button>
-                    <div class="textQuant">Quantità: 
-                        <div class="prodquant">@Model.prova</div>
-                    </div>
+                    <div class="textQuant">Quantità:</div>
                     <button class="btn btnQuant btnPiu">+</button>
                 </div>
                 <div class="btnCompra">
-                    <button>Compra</button>
+                    <button class="btn">Compra</button>
                 </div>
                 <div class=""></div>
             </div>
         </div>
     </div>
 </div>
-@section Scripts
-{
-    <script>
-    function RazorFunction() {
-        $(".prodquant").html('@Model.aumenta()');
-    }
-
-    </script>
-} 
