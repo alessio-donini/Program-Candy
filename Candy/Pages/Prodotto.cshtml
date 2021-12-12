@@ -27,9 +27,10 @@
             </div>
             <div class="row sezioneAcquisto">
                 <div class="col-4 d-flex justify-content-lg-start offset-2">
-                    <button class="btn btnAcquisto btnMeno">-</button>
-                    <div class="textQuant">Quantità:</div>
-                    <button class="btn btnAcquisto btnPiu">+</button>
+                    <button class="btn btnAcquisto btnMeno" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                    <!-- <div class="textQuant">Quantità:</div> -->Quantità: 
+                    <input class="quantity" min="0" name="quantity" value="1" type="number">
+                    <button class="btn btnAcquisto btnPiu" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
                 </div>
                 <div class="col-3 d-flex justify-content-lg-end offset-1">
                     <button class="btn btnAcquisto btnCompra">Compra</button>
