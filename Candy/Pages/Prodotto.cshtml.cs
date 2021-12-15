@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Candy.Pages
 {
-    public class ProvaModel : PageModel
+    public class ProdottoModel : PageModel
     {
         public string idProdotto;
         public int quant;
