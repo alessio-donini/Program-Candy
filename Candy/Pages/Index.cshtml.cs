@@ -18,6 +18,11 @@ namespace Candy.Pages
             _logger = logger;
         }
 
-        public void OnGet() { }
+        public string prova;
+
+        public void OnGet(string quantcompr)
+        {
+            this.prova = quantcompr;
+        }
     }
 }
