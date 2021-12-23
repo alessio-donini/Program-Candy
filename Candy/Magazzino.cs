@@ -46,7 +46,7 @@ namespace Candy
                 }
                 candy += $"{tmp[tmp.Length - 1].ToLower()}";
             }
-            candy += ".jpg";
+            candy += ".png";
             return candy;
         }
     }
