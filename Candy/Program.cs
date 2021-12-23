@@ -18,7 +18,7 @@ namespace Candy
         public static void Main(string[] args)
         {
             CleanPath();
-            p.Disponibilità(ref products, ref path, ref modifiedProducts);
+            p.Disponibilita(ref products, ref path, ref modifiedProducts);
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -33,7 +33,7 @@ namespace Candy
             if (modifiedProducts)
             {
                 products.Clear();
-                p.Disponibilità(ref products, ref path, ref modifiedProducts);
+                p.Disponibilita(ref products, ref path, ref modifiedProducts);
                 modifiedProducts = false;
             }
         }

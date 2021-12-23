@@ -19,7 +19,7 @@ namespace Candy
         public void TogliProdottoCarrello()
         {
         }
-        public void Disponibilità(ref List<Prodotto> products, ref string path, ref bool modifiedProducts)
+        public void Disponibilita(ref List<Prodotto> products, ref string path, ref bool modifiedProducts)
         {
             List<string> lines = new List<string>();
             lines = File.ReadAllLines(path).ToList();
