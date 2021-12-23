@@ -29,5 +29,11 @@ namespace Candy.Pages
                 }
             }
         }
+        public int GetValue()
+        {
+            if (quant == 0)
+                return 0;
+            return 1;
+        }
     }
 }
