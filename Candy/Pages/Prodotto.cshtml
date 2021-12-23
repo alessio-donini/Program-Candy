@@ -25,22 +25,24 @@
             <div class="row d-flex justify-content-center">
                 <h3 class="prezzoProdotto">@Model.prez€</h3>
             </div>
-            <div class="row sezioneAcquisto">
-                <div class="col-4 d-flex justify-content-lg-start offset-2">
-                    <button class="btn btnAcquisto btnMeno" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
-                    <!-- <div class="textQuant">Quantità:</div> -->Quantità:
-                    <input class="quantity" min="0" max="@Model.quant" name="quantity" value="@Model.GetValue()" type="number">
-                    <button class="btn btnAcquisto btnPiu" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+            <form action="/Index.cshtml">
+                <div class="row sezioneAcquisto">
+                    <div class="col-4 d-flex justify-content-lg-start offset-2">
+                        <button class="btn btnAcquisto btnMeno" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                        <!-- <div class="textQuant">Quantità:</div> -->Quantità:
+                        <input class="quantity" min="0" max="@Model.quant" name="quantity" value="@Model.GetValue()" type="number">
+                        <button class="btn btnAcquisto btnPiu" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                    </div>
+                    <div class="col-3 d-flex justify-content-lg-end offset-1">
+                        <button asp-page="/Index" class="btn btnAcquisto btnCompra">Compra</button>
+                    </div>
+                    <div class="col-2 d-flex justify-content-lg-between">
+                        <button class="btn btnAcquisto btnCarrello">
+                            <img class="shopcartProdimg" src="~/images/shop_cart_icon.png" />
+                        </button>
+                    </div>
                 </div>
-                <div class="col-3 d-flex justify-content-lg-end offset-1">
-                    <button asp-page="/Prova" class="btn btnAcquisto btnCompra">Compra</button>
-                </div>
-                <div class="col-2 d-flex justify-content-lg-between">
-                    <button class="btn btnAcquisto btnCarrello">
-                        <img class="shopcartProdimg" src="~/images/shop_cart_icon.png" />
-                    </button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
