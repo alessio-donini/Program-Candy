@@ -9,7 +9,7 @@
         @{
             for (int i = 0; i < Program.products.Count; i++)
             {
-                <div class="col-12 col-md-6 col-lg-3 caramella">
+                <div class="col-12 col-md-6 col-lg-4 caramella">
                     <a asp-page="/Prodotto" asp-route-ID=@Program.products[i].nome>
                     <img class="img-fluid caramellaimg" src="~/images/@Program.p.FormatCandy(Program.products[i].nome)" />
                     @{

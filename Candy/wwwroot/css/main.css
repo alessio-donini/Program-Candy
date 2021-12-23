@@ -16,8 +16,8 @@ img {
 }
 .caramellaimg {
     border-radius: 10%;
-    width: 50%;
-    height: 100px;
+    width: 90%;
+    height: 200px;
 }
 
 @media screen and (max-width: 321px) { /* XXS --> iPhone 5/SE */
