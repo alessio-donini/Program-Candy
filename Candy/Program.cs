@@ -64,7 +64,7 @@ namespace Candy
         private static void GetOS()
         {
             string os = Environment.OSVersion.ToString().ToLower();
-            if (os.Contains("mac"))
+            if (os.Contains("unix"))
                 isWindows = false;
         }
     }
