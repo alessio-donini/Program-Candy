@@ -1,0 +1,4 @@
+Scostamento x: -675
+Scostamento y: -265
+Larghezza: 1650px
+Altezza: 17560px

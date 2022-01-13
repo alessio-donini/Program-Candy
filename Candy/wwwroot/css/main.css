@@ -1,36 +1,51 @@
 * {
     user-select: none;
 }
+
 a:-webkit-any-link {
     text-decoration: none;
     color: black;
 }
+
 .navcandy {
     padding: 0px;
 }
+
 img {
     pointer-events: none;
 }
-.caramella {
-    padding: 0px;
-}
-.caramellaimg {
-    border-radius: 10%;
-    width: 90%;
+
+.img-box{
     height: 200px;
+}
+
+.candy-img{
+    height: 100%;
+}
+
+.box {
+    background-color: #faf9fa;
+    border-radius: 1.5vw;
+    margin-top: 5%;
+}
+.detail-box{
+    margin-top: 2%;
 }
 
 @media screen and (max-width: 321px) { /* XXS --> iPhone 5/SE */
     .logoimg {
         max-width: 100px;
     }
+
     .shopcartimg {
         max-width: 35px;
     }
+
     .adminimg {
         max-width: 35px;
     }
 }
+
 @media screen and (max-width: 575px) { /* XS */
     .logoimg {
         max-width: 150px;
@@ -44,6 +59,7 @@ img {
         max-width: 40px;
     }
 }
+
 @media screen and (min-width: 576px) { /* SM */
     .logoimg {
         max-width: 180px;
@@ -57,6 +73,7 @@ img {
         max-width: 43px;
     }
 }
+
 @media screen and (min-width: 768px) { /* MD */
     .logoimg {
         max-width: 230px;
@@ -70,6 +87,7 @@ img {
         max-width: 57px;
     }
 }
+
 @media screen and (min-width: 992px) { /* LG */
     .logoimg {
         max-width: 320px;
@@ -84,10 +102,12 @@ img {
         max-width: 75px;
     }
 }
+
 @media screen and (min-width: 1200px) { /* XL */
     .logoimg {
         max-width: 400px;
     }
 }
+
 @media screen and (min-width: 1400px) { /* XXL */
 }
