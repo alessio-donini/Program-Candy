@@ -6,14 +6,14 @@
 <div class="text-center">
     <div class="row">
         <div class="carousel slide container-fluid" id="carouselExampleIndicators" data-bs-ride="carousel">
-            <div class="carousel-indicators">
+            <ol class="carousel-indicators">
                 <li type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></li>
                 <li type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">
                 </li>
                 <li type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">
                 </li>
-            </div>
+            </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <!--<img src="https://uhdwallpapers.org/uploads/converted/19/08/03/huawei-mediapad-m6-stock-wallpaper-1024x1024_666874-mm-90.jpg"
@@ -40,47 +40,42 @@
         <h1>Ultimi Arrivati</h1>
     </div>
     @{ Program.UpdateList(); }
-    <div class="row">
-        @{
-            for (int i = 0; i < Program.products.Count; i++)
-            {
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="box">
-                        <a asp-page="/Prodotto" asp-route-ID=@Program.products[i].nome>
-                            <div class="img-box">
-                                <img class="img-fluid candy-img" src="~/images/@Program.p.FormatCandy(Program.products[i].nome)" />
-                            </div>
-                            <div class="row detail-box">
-                                @{ Disp(@Program.products[i]); }
-                            </div>
-                        </a>
-                    </div>
+<div class="row">
+    @{
+        for (int i = 0; i < Program.products.Count; i++)
+        {
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="box">
+                    <a asp-page="/Prodotto" asp-route-ID=@Program.products[i].nome>
+                        <div class="img-box">
+                            <img class="img-fluid candy-img" src="~/images/@Program.p.FormatCandy(Program.products[i].nome)" />
+                        </div>
+                        <div class="row detail-box">
+                            @{
+                                if (@Program.products[i].quantita > 0)
+                                {
+                                    <div class="col-3 d-flex justify-content-start nomeProdottoLista">
+                                        <h5>@Program.products[i].nome</h5>
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end offset-lg-4">
+                                        <h5>Prezzo: @Program.products[i].prezzo€</h5>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="col-3 d-flex justify-content-start nomeProdottoLista">
+                                        <h5>@Program.products[i].nome</h5>
+                                    </div>
+                                    <div class="col-3 d-flex justify-content-end offset-lg-5">
+                                        <h5 style="color: red;">Esaurito</h5>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </a>
                 </div>
-            }
-        }
-    </div>
-</div>
-
-@{
-    void Disp(Prodotto prod)
-    {
-        if (prod.quantita > 0)
-        {
-            <div class="col-3 d-flex justify-content-lg-start nomeProdottoLista">
-                <h6>@prod.nome</h6>
-            </div>
-            <div class="col-3 d-flex justify-content-lg-end offset-5">
-                <h6>Prezzo: @prod.prezzo€</h6>
-            </div>
-        }
-        else
-        {
-            <div class="col-3 d-flex justify-content-lg-start nomeProdottoLista">
-                <h6>@prod.nome</h6>
-            </div>
-            <div class="col-3 d-flex justify-content-lg-end offset-5">
-                <h6 style="color: red;">Esaurito</h6>
             </div>
         }
     }
-}
+</div>
+</div>
