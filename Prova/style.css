@@ -11,3 +11,8 @@
     right: 0;
     padding-bottom: 50px;
 }
+.carousel-indicators > li {
+  border-radius: 50%;
+  height: 12px !important;
+  width: 12px !important;
+}
