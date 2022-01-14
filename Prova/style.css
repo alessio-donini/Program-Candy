@@ -16,3 +16,6 @@
   height: 12px !important;
   width: 12px !important;
 }
+.carousel-indicators > li.active {
+    background-color: greenyellow;
+}
