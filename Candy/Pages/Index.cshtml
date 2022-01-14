@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<section class="slider_section ">
+</section>
 <div class="text-center">
     @{ Program.UpdateList(); }
     <div class="row">
@@ -17,18 +19,14 @@
                     }
                     </a>
                 </div>*/
-                <div class="col-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="box">
                         <a asp-page="/Prodotto" asp-route-ID=@Program.products[i].nome>
                             <div class="img-box">
                                 <img class="img-fluid candy-img" src="~/images/@Program.p.FormatCandy(Program.products[i].nome)" />
                             </div>
-                            <div class="detail-box">
-                                <h6>
-                                    @{
-                                        Disp(@Program.products[i]);
-                                    }
-                                </h6>
+                            <div class="row detail-box">
+                                @{ Disp(@Program.products[i]); }
                             </div>
                         </a>
                     </div>
@@ -43,13 +41,21 @@
     {
         if (prod.quantita > 0)
         {
-            <p>@prod.nome<br/>
-               @prod.prezzo€
-            </p>
+            <div class="col-3 d-flex justify-content-lg-start nomeProdottoLista">
+                <h6>@prod.nome</h6>
+            </div>
+            <div class="col-3 d-flex justify-content-lg-end offset-5">
+                <h6>Prezzo: @prod.prezzo€</h6>
+            </div>
         }
         else
         {
-            <p style="color: red;">Esaurito</p>
+            <div class="col-3 d-flex justify-content-lg-start nomeProdottoLista">
+                <h6>@prod.nome</h6>
+            </div>
+            <div class="col-3 d-flex justify-content-lg-end offset-5">
+                <h6 style="color: red;">Esaurito</h6>
+            </div>
         }
     }
 }

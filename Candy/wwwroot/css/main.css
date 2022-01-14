@@ -101,11 +101,17 @@ img {
     .adminimg {
         max-width: 75px;
     }
+    .nomeProdottoLista {
+        margin-left: 2%;
+    }
 }
 
 @media screen and (min-width: 1200px) { /* XL */
     .logoimg {
         max-width: 400px;
+    }
+    .nomeProdottoLista{
+        margin-left: 3%;
     }
 }
 
