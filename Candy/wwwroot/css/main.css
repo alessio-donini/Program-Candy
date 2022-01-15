@@ -67,8 +67,7 @@ img {
     padding-bottom: 1%;
 }
 
-/* XXS --> iPhone 5/SE */
-/*@media screen and (max-width: 321px) {
+@media screen and (max-width: 400px) { /* <=400 */
     .logoimg {
         max-width: 100px;
     }
@@ -80,7 +79,11 @@ img {
     .adminimg {
         max-width: 35px;
     }
-}*/
+    .carousel-img {
+        width: 60% !important;
+        padding-bottom: 5%;
+    }
+}
 
 @media screen and (max-width: 575px) { /* XS */
     .logoimg {
@@ -95,11 +98,11 @@ img {
         max-width: 40px;
     }
     .carousel-img {
-        width: 55%;
-        padding-bottom: 7%;
+        width: 50%;
+        padding-bottom: 5%;
     }
     .slide-text{
-        padding-bottom: 40%;
+        padding-bottom: 33%;
         font-size: 5vw;
     }
 
@@ -126,6 +129,26 @@ img {
     .adminimg {
         max-width: 43px;
     }
+
+    .carousel-img {
+        width: 35%;
+    }
+
+    .slide-text {
+        padding-bottom: 15%;
+        font-size: 3.5vw;
+    }
+
+    .box {
+        margin-top: 10%;
+        margin-left: 10%;
+        border-radius: 3vw;
+    }
+
+    .products-title {
+        margin-top: 8% !important;
+        margin-bottom: 4%;
+    }
 }
 
 @media screen and (min-width: 768px) { /* MD */
@@ -139,6 +162,9 @@ img {
 
     .adminimg {
         max-width: 57px;
+    }
+    .detail-text{
+        font-size: 2vw;
     }
 }
 

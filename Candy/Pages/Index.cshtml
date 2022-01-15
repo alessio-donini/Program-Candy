@@ -82,19 +82,19 @@
                                 if (@Program.products[i].quantita > 0)
                                 {
                                     <div class="col-3 d-flex justify-content-start nomeProdottoLista">
-                                        <h5>@Program.products[i].nome</h5>
+                                        <h5 class="detail-text">@Program.products[i].nome</h5>
                                     </div>
-                                    <div class="col-5 d-flex justify-content-end offset-4 col-lg-4 offset-lg-4">
-                                        <h5>Prezzo: @Program.products[i].prezzo€</h5>
+                                    <div class="col-5 d-flex justify-content-end offset-4 offset-md-4 col-lg-4 offset-lg-4">
+                                        <h5 class="detail-text">Prezzo: @Program.products[i].prezzo€</h5>
                                     </div>
                                 }
                                 else
                                 {
                                     <div class="col-3 d-flex justify-content-start nomeProdottoLista">
-                                        <h5>@Program.products[i].nome</h5>
+                                        <h5 class="detail-text">@Program.products[i].nome</h5>
                                     </div>
                                     <div class="col-5 d-flex justify-content-end offset-4 col-lg-4 offset-lg-4">
-                                        <h5 style="color: red;">Esaurito</h5>
+                                        <h5 class="detail-text" style="color: red;">Esaurito</h5>
                                     </div>
                                 }
                             }
