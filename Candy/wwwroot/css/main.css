@@ -25,13 +25,7 @@ img {
 
 .box {
     background-color: #faf9fa;
-    border-radius: 1.5vw;
-    margin-top: 5%;
-    margin-left: 10%;
     width: 80%;
-}
-.detail-box{
-    margin-top: 2%;
 }
 
 .slide {
@@ -73,7 +67,8 @@ img {
     padding-bottom: 1%;
 }
 
-@media screen and (max-width: 321px) { /* XXS --> iPhone 5/SE */
+/* XXS --> iPhone 5/SE */
+/*@media screen and (max-width: 321px) {
     .logoimg {
         max-width: 100px;
     }
@@ -85,7 +80,7 @@ img {
     .adminimg {
         max-width: 35px;
     }
-}
+}*/
 
 @media screen and (max-width: 575px) { /* XS */
     .logoimg {
@@ -98,6 +93,24 @@ img {
 
     .adminimg {
         max-width: 40px;
+    }
+    .carousel-img {
+        width: 55%;
+        padding-bottom: 7%;
+    }
+    .slide-text{
+        padding-bottom: 40%;
+        font-size: 5vw;
+    }
+
+    .box {
+        margin-top: 10%;
+        margin-left: 10%;
+        border-radius: 3vw;
+    }
+    .products-title{
+        margin-top: 8% !important;
+        margin-bottom: 4%;
     }
 }
 
@@ -151,6 +164,16 @@ img {
     .slide-text {
         font-size: 30px;
         margin-top: 40%;
+    }
+
+    .detail-box {
+        margin-top: 2%;
+    }
+
+    .box {
+        margin-top: 5%;
+        margin-left: 10%;
+        border-radius: 1.5vw;
     }
 
     .products-title{
