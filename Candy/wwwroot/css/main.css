@@ -15,12 +15,14 @@ img {
     pointer-events: none;
 }
 
-.img-box{
+.img-box {
     height: 200px;
+    margin-bottom: 2%;
 }
 
-.candy-img{
+.candy-img {
     height: 100% !important;
+    margin-top: 2.5%;
 }
 
 .box {
@@ -28,8 +30,12 @@ img {
     width: 80%;
 }
 
+.detail-text{
+    white-space: nowrap;
+}
+
 .slide {
-    background-color: grey;
+    background-color: #ADADAD;
     border-radius: 0 0 0 200px;
 }
 
@@ -164,7 +170,7 @@ img {
         max-width: 57px;
     }
     .detail-text{
-        font-size: 2vw;
+        font-size: 2.4vw;
     }
 }
 
@@ -181,21 +187,21 @@ img {
     .adminimg {
         max-width: 75px;
     }
-    .nomeProdottoLista {
-        margin-left: 2%;
-    }
     .carousel-img{
-        width: 45%;
+        width: 75%;
+        padding-bottom: 10%;
     }
     .slide-text {
-        font-size: 30px;
-        margin-top: 40%;
+        font-size: 24px;
+        margin-top: 50%;
     }
 
     .detail-box {
         margin-top: 2%;
     }
-
+    .detail-text {
+        font-size: 1.8vw;
+    }
     .box {
         margin-top: 5%;
         margin-left: 10%;
@@ -211,10 +217,42 @@ img {
     .logoimg {
         max-width: 400px;
     }
-    .nomeProdottoLista{
-        margin-left: 3%;
+    .carousel-img {
+        width: 60%;
+        padding-bottom: 5%;
+    }
+
+    .slide-text {
+        font-size: 24px;
+        margin-top: 40%;
+    }
+
+    .detail-box {
+        margin-top: 2%;
+    }
+
+    .detail-text {
+        font-size: 1.8vw;
     }
 }
 
 @media screen and (min-width: 1400px) { /* XXL */
+    .carousel-img {
+        width: 45%;
+        padding-bottom: 0;
+    }
+
+    .slide-text {
+        font-size: 30px;
+        margin-top: 30%;
+    }
+
+    .detail-box {
+        margin-top: 3%;
+    }
+
+    .detail-text {
+        font-size: 1.3vw;
+        margin-top: 1%;
+    }
 }
