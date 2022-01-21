@@ -1,33 +1,4 @@
-﻿.btnAcquisto {
-    padding: 0;
-}
-
-.btnMeno {
-    background-color: #D600BF;
-    text-align: center;
-    color: #FF8A00;
-    font-size: 33px;
-    font-family: 'Bungee', cursive;
-}
-
-.btnPiu {
-    text-align: center;
-    background-color: #FF8A00;
-    color: #D600BF;
-    font-size: 33px;
-    font-family: 'Bungee', cursive;
-}
-
-.btnCompra {
-    background-color: #9ae674 !important;
-}
-
-.btnCarrello {
-    background-color: #FF8A00 !important;
-    border-color: #E67C00 !important;
-    border-width: 3px !important;
-}
-input.quantity {
+﻿input.quantity {
     border: none;
     text-align: center;
     width: 3rem;
@@ -45,98 +16,20 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media screen and (max-width: 575px) { /* XS */
-    .nomeProdotto {
-        font-size: 50px;
-        margin-bottom: 5%;
-    }
 }
 
 @media screen and (min-width: 576px) { /* SM */
 }
 
 @media screen and (min-width: 768px) { /* MD */
-    .logoimg {
-        max-width: 230px;
-    }
-
-    .shopcartimg {
-        max-width: 57px;
-    }
-
-    .adminimg {
-        max-width: 57px;
-    }
-
-    .nomeProdotto {
-        font-size: 70px;
-        margin-bottom: 4%;
-    }
 }
 
 @media screen and (min-width: 992px) { /* LG */
-    .nomeProdotto {
-        font-size: 60px;
-        margin-bottom: 6%;
-    }
-
-    .sezioneAcquisto {
-        margin-top: 15%;
-    }
-
-    .textQuant {
-        margin-left: 1%;
-        margin-right: 3%;
-        padding-top: 4%;
-    }
-
-    .btnAcquisto {
-        height: 50px;
-    }
-
-    .btnPiu {
-        width: 50px;
-        border-radius: 20%;
-    }
-
-    .btnMeno {
-        width: 50px;
-        border-radius: 20%;
-    }
-
-    .btnCompra {
-        width: 100%;
-        border-radius: 10px;
-        font-size: 28px;
-    }
-
-    .btnCarrello {
-        width: 80px;
-    }
-
-    .shopcartProdimg {
-        width: 40%;
-        height: auto;
-    }
 }
 
 @media screen and (min-width: 1200px) { /* XL */
 }
 
 @media screen and (min-width: 1400px) { /* XXL */
-    .prodottoimg {
-        width: 70%;
-    }
-    .dettagli {
-        margin-top: 100px !important;
-    }
-    .sezioneAcquisto {
-        font-size: 30px !important;
-    }
-    .btnCompra {
-        font-size: 30px !important;
-    }
-    .shopcartProdimg {
-        width:60% ;
-    }
 
 }

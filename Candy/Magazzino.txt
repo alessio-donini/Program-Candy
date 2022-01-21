@@ -15,7 +15,6 @@ Rane|100|5,99
 Teschi|100|5,99
 Pesche|100|5,99
 Jelly Beans|100|5,99
-Zucche|100|5,99
 Occhi|100|5,99
 Ciliegie|100|5,99
 Puffi|100|5,99
