@@ -11,21 +11,23 @@
         <div class="col-12 col-lg-6">
             <img class="img-fluid img-prodotto" src="~/images/@Model.imgProdotto" />
         </div>
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-6 info-prodotto">
             <div class="row d-flex justify-content-center">
-                <h1 class="">@Model.idProdotto</h1>
+                <h1>@Model.idProdotto</h1>
+            </div>
+            <div class="row justify-content-start disp-prodotto">
+                <h5 class="disp-text-prodotto">Disponibilità: @Model.quant</h5>
             </div>
             <div class="row justify-content-start">
-                <h4 class="">Disponibilità: @Model.quant</h4>
-            </div>
-            <div class="row justify-content-start">
-                <div class="col-3">Quantità:</div>
+                <div class="col-3">
+                    <h5 class="quant-text-prodotto">Quantità:</h5>
+                </div>
                 <div class="col-8">
-                    <button class="btn btn-primary" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                    <button class="btn btn-primary btn-meno" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                         <img class="img-fluid" src="~/images/meno.png" />
                     </button>
                     <input class="quantity" min="0" max="@Model.quant" name="quantity" value="@Model.GetValue()" type="number">
-                    <button class="btn btn-primary" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                    <button class="btn btn-primary btn-piu" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                         <img class="img-fluid" src="~/images/piu.png" />
                     </button>
                 </div>
@@ -35,10 +37,10 @@
                     <h3 class="">@Model.prez €</h3>
                 </div>
                 <div class="col-3 d-flex justify-content-end offset-3">
-                    <button asp-page="/Index" class="btn">Compra</button>
+                    <button asp-page="/Index" class="btn btn-primary btn-compra">Compra</button>
                 </div>
                 <div class="col-2 d-flex justify-content-between">
-                    <button class="btn">
+                    <button class="btn btn-primary btn-carrello">
                         <img class="img-fluid" src="~/images/shop_cart_icon.png" />
                     </button>
                 </div>
