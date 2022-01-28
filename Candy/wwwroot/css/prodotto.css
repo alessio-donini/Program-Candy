@@ -31,5 +31,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media screen and (min-width: 1400px) { /* XXL */
-
+    .img-prodotto {
+        width: 60%;
+        margin-top: 13%;
+        margin-right: 20%;
+    }
 }

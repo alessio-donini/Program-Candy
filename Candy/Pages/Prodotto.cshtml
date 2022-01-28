@@ -4,16 +4,12 @@
     ViewData["Title"] = "Pagina Prodotto";
 }
 @* su @page -> "{id}" per vsualizzare sul link l'id del parametro, questo inoltre sarà necessario per visualizzare la
-    pagina
-
-    <h1 class="display-4">Pagina del prodotto</h1>
-    <p>valore passato per parametro alla pagina: @Model.id</p>
-    <p>Vediamo se funziona: @Model.ProductData()</p> *@
+    pagina*@
 <div class="text-center">
     @{ Program.UpdateList(); Model.GetProductData(); }
     <div class="row">
-        <div class="col-12 col-lg-6 caramella">
-            <img class="img-fluid" src="~/images/@Model.imgProdotto" />
+        <div class="col-12 col-lg-6">
+            <img class="img-fluid img-prodotto" src="~/images/@Model.imgProdotto" />
         </div>
         <div class="col-12 col-lg-6">
             <div class="row d-flex justify-content-center">
@@ -25,9 +21,13 @@
             <div class="row justify-content-start">
                 <div class="col-3">Quantità:</div>
                 <div class="col-8">
-                    <button class="btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                    <button class="btn btn-primary" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                        <img class="img-fluid" src="~/images/meno.png" />
+                    </button>
                     <input class="quantity" min="0" max="@Model.quant" name="quantity" value="@Model.GetValue()" type="number">
-                    <button class="btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                    <button class="btn btn-primary" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                        <img class="img-fluid" src="~/images/piu.png" />
+                    </button>
                 </div>
             </div>
             <div class="row">
@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-2 d-flex justify-content-between">
                     <button class="btn">
-                        <img class="" src="~/images/shop_cart_icon.png" />
+                        <img class="img-fluid" src="~/images/shop_cart_icon.png" />
                     </button>
                 </div>
             </div>
