@@ -236,15 +236,16 @@ img {
     }
 }
 
-@media screen and (min-width: 1400px) { /* XXL */
+@media screen and (min-width: 1400px) { /* XXL */ /*417 445*/
     .carousel-img {
         width: 45%;
+        min-width: 417px;
         padding-bottom: 0;
     }
 
     .slide-text {
         font-size: 30px;
-        margin-top: 30%;
+        margin-top: 183px;
     }
 
     .detail-box {
