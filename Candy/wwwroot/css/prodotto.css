@@ -12,6 +12,15 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+.btn-prodotto {
+    background-color: rgb(177 232 98) !important;
+    border-color: transparent !important;
+}
+
+.quant-text-prodotto{
+    text-align: right;
+}
+
 @media screen and (max-width: 321px) { /* XXS --> iPhone 5/SE */
 }
 
@@ -42,11 +51,23 @@ input[type=number]::-webkit-outer-spin-button {
     .disp-prodotto{
         margin-top: 3% !important;
     }
-    .btn-meno{
-        width: 7%;
+    .quant-text-prodotto {
+        padding-top: 5%;
+    }
+    .prezzo-text{
+        padding-top: 5%;
+    }
+    .sez-quant {
+        margin-top: 6% !important;
+    }
+    .sez-acquisto {
+        margin-top: 2% !important;
+    }
+    .btn-meno {
+        width: 13%;
     }
     .btn-piu {
-        width: 7%;
+        width: 13%;
     }
     .btn-compra{
         width: 150%;
