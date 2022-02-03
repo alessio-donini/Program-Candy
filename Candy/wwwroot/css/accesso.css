@@ -4,6 +4,20 @@
     height: 100px;
 }
 
+.img-profile{
+    width: 120px;
+    margin-top: 250px;
+}
+
+.btn-accesso {
+    background-color: rgb(177 232 98) !important;
+    border-color: transparent !important;
+}
+
+/*.btn:active, .btn:focus > .btn-accesso {
+    text-shadow: #719c3a !important;
+}*/
+
 .form-signin {
     width: 100%;
     max-width: 330px;
