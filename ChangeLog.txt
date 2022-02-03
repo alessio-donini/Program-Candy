@@ -1,3 +1,23 @@
-Creation file program (27/10/2021)
-Design navbar, addition logo, shopping cart and admin icons (3/12/2021)
-Update of the candy list, add of an algorithm for when a product changes it data in order to always keep the list updated (9/12/2021)
+Creazione file program (27/10/2021)
+Design navbar, logo aggiuntivo, carrello della spesa e icone di amministrazione (3/12/2021)
+
+Aggiornamento della lista delle caramelle, aggiunta di un algoritmo per quando un prodotto cambia i suoi dati in modo da mantenere la lista sempre aggiornata(9/12/2021)
+
+E' stato spostato il file txt che contiene i nomi, le quantità e i prezzi di tutti i prodotti, nella cartella pincipale, questo perchè era stato inserito nella cartella bin/Debug/netcoreapp3.1 che veniva creata quando il progetto veniva compilato, quindi gli altri computer, differenti a quello principale non potevano leggere il file, inoltre è stata "creata" una funzione nel Program.cs che si occupa di pulire il percorso dell'Enviroment , e adesso sto facendo degli esperimenti per aumentare le quantità di prodotti che si vogliono acquistare (10/12/2021)
+
+Definità la quantità massima di prodotti da poter comprare per un unico prodotto (15/12/2021)
+
+Reso funzionante anche su mac (23/12/2021)
+Cambiata l'estensione delle immagini da png a jpg (23/12/2021)
+
+Aggiunta di un carosello nella pagina princiopale (12/01/2022)
+
+Fatti dei ritocchi alla pagina principale dove i box dei prodotti sono allineati al centro della pagina, la navbar rimane visibile anche se si naviga la pagina verso il basso e nel codice è stata tolta la funzione "Disp" in quanto utile solo come esperimento all'inizio, ora non è necessaria e il suo codice è stato spostato dentro il for che si occupa di creare tutti i box dei prodotti (14/01/2022)
+
+Pagina principale completata (20/12/2022)
+
+Inizio fix pagina del prodotto (28/12/2022)
+
+Pagina del prodotto 90% completata (03/02/2022)
+Sreata pagina di accesso da sistemare (03/02/2022)
+
