@@ -21,8 +21,12 @@
 .form-signin {
     width: 100%;
     max-width: 330px;
+    height:auto;
     padding: 15px;
     margin: 0 auto;
+}
+.img-profile{
+    margin-top: 4vw;
 }
 
 .form-signin .form-control {
@@ -47,4 +51,17 @@
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+
+.access-container {
+    margin-left: 15%;
+    width: 70%;
+    margin-top: 500px;
+    background-color: #faf9fa;
+    border-radius: 7%;
+}
+.footer{
+    width:auto;
+    height:auto;
+    background-color:grey;
 }
