@@ -25,6 +25,60 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media screen and (max-width: 575px) { /* XS */
+    .img-prodotto {
+        width: 90%;
+        margin-top: 25%;
+    }
+
+    .info-prodotto {
+        margin-top: 13% !important;
+    }
+
+    .nome-prodotto {
+        font-size: 12vw;
+    }
+
+    .disp-prodotto {
+        margin-top: 5% !important;
+    }
+
+    .disp-text-prodotto {
+        font-size: 4.4vw;
+    }
+
+    .quant-text-prodotto {
+        padding-top: 8%;
+    }
+
+    .prezzo-text {
+        padding-top: 6%;
+        font-size: 7vw;
+    }
+
+    .sez-quant {
+        margin-top: 7% !important;
+    }
+
+    .sez-acquisto {
+        margin-top: 3% !important;
+    }
+
+    .btn-meno {
+        width: 40px;
+    }
+
+    .btn-piu {
+        width: 40px;
+    }
+
+    .btn-compra {
+        width: 150%;
+        font-size: 5vw !important;
+    }
+
+    .btn-carrello {
+        width: 60%;
+    }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) { /* SM */
