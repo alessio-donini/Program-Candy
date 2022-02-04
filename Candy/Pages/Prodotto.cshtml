@@ -13,13 +13,13 @@
         </div>
         <div class="col-12 col-lg-6 info-prodotto">
             <div class="row d-flex justify-content-center">
-                <h1>@Model.idProdotto</h1>
+                <h1 class="nome-prodotto">@Model.idProdotto</h1>
             </div>
             <div class="row justify-content-start disp-prodotto">
                 <h5 class="disp-text-prodotto">Disponibilità: @Model.quant</h5>
             </div>
             <div class="row sez-quant">
-                <div class="col-3 offset-3">
+                <div class="col-3 offset-2 offset-md-3">
                     <h5 class="quant-text-prodotto">Quantità:</h5>
                 </div>
                 <div class="col-4 text-start">
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="row sez-acquisto">
-                <div class="d-flex col-2 offset-3 offset-xl-2 offset-xxl-3 justify-content-center">
+                <div class="d-flex col-2 offset-2 offset-md-3 offset-xl-2 offset-xxl-3 justify-content-center">
                     <h3 class="prezzo-text">@Model.prez €</h3>
                 </div>
                 <div class=" d-flex col-4 col-xxl-3 justify-content-end">

@@ -27,17 +27,71 @@ input[type=number]::-webkit-outer-spin-button {
 @media screen and (max-width: 575px) { /* XS */
 }
 
-@media screen and (min-width: 576px) { /* SM */
+@media screen and (min-width: 576px) and (max-width: 767px) { /* SM */
+    .img-prodotto {
+        width: 80%;
+        margin-top: 13%;
+    }
+
+    .info-prodotto {
+        margin-top: 10% !important;
+    }
+
+    .nome-prodotto {
+        font-size: 7vw;
+    }
+
+    .disp-prodotto {
+        margin-top: 3% !important;
+    }
+
+    .disp-text-prodotto {
+        font-size: 3.4vw;
+    }
+
+    .quant-text-prodotto {
+        padding-top: 8%;
+    }
+
+    .prezzo-text {
+        padding-top: 6%;
+        font-size: 4.7vw;
+    }
+
+    .sez-quant {
+        margin-top: 3% !important;
+    }
+
+    .sez-acquisto {
+        margin-top: 2% !important;
+    }
+
+    .btn-meno {
+        width: 40px;
+    }
+
+    .btn-piu {
+        width: 40px;
+    }
+
+    .btn-compra {
+        width: 150%;
+        font-size: 4vw !important;
+    }
+
+    .btn-carrello {
+        width: 45%;
+    }
 }
 
 @media screen and (min-width: 768px) { /* MD */
     .img-prodotto {
-        width: 75%;
+        width: 65%;
         margin-top: 10%;
     }
 
     .info-prodotto {
-        margin-top: 6% !important;
+        margin-top: 5% !important;
     }
 
     .disp-prodotto {
@@ -50,7 +104,7 @@ input[type=number]::-webkit-outer-spin-button {
 
     .prezzo-text {
         padding-top: 6%;
-        font-size: 2.1vw;
+        font-size: 2.8vw;
     }
 
     .sez-quant {
@@ -89,37 +143,12 @@ input[type=number]::-webkit-outer-spin-button {
         margin-top: 13% !important;
     }
 
-    .disp-prodotto {
-        margin-top: 3% !important;
-    }
-
-    .quant-text-prodotto {
-        padding-top: 5%;
-    }
-
     .prezzo-text {
-        padding-top: 6%;
         font-size: 2.1vw;
     }
 
     .sez-quant {
         margin-top: 6% !important;
-    }
-
-    .sez-acquisto {
-        margin-top: 2% !important;
-    }
-
-    .btn-meno {
-        width: 40px;
-    }
-
-    .btn-piu {
-        width: 40px;
-    }
-
-    .btn-compra {
-        width: 150%;
     }
 
     .btn-carrello {
