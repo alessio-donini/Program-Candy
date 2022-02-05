@@ -12,10 +12,10 @@
     <div class="row">
         <div class="col-12 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-6 offset-lg-3">
             <div class="access-container">
-                <form class="form-signin">
+                <form class="form-signin" method="get" action="https://localhost:44355/accesso">
                     <img class="mb-4 img-profile" src="~/images/admin_icon.png">
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus value="">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required value="">
                     <button class="btn btn-lg btn-primary btn-block btn-accesso shadow-none" type="submit">Accedi</button>
                 </form>
             </div>
@@ -24,7 +24,11 @@
 
         </div>
     </div>
-    <footer class="container-fluid footer">
-        ciao
-    </footer>
 </div>
+<!--<script LANGUAGE="JavaScript">
+        const arrayText = [];
+        function testResults(form) {
+            arrayText[0] = form.inputEmail.value;
+            arrayText[1] = form.inputPassword.value;
+        }
+    </script>-->
