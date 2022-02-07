@@ -30,7 +30,8 @@
                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                             <img class="img-fluid" src="~/images/meno.png" />
                         </button>
-                        <input class="quantity" min="0" max="@Model.quant" id="quantProd" value="@Model.GetValue()" type="number">
+                        <input class="quantity" min="0" max="@Model.quant" name="quantProd" value="@Model.GetValue()"
+                            type="number">
                         <button class="btn btn-primary btn-piu btn-prodotto" type="button"
                             onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                             <img class="img-fluid" src="~/images/piu.png" />

@@ -22,9 +22,9 @@ namespace Candy.Pages
         public void OnGet()
         {
         }
-        public void OnPost(string quantCompr)
+        public void OnPost(int quantProd)
         {
-            this.prova = quantCompr;
+            this.prova = quantProd.ToString();
         }
     }
 }

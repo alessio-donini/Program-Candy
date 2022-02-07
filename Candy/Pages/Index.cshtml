@@ -7,7 +7,8 @@
     <div class="row">
         <div class="carousel slide container-fluid" id="candyCarousel" data-bs-ride="carousel">
             <ol class="carousel-indicators">
-                <li type="button" data-bs-target="#candyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+                <li type="button" data-bs-target="#candyCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></li>
                 <li type="button" data-bs-target="#candyCarousel" data-bs-slide-to="1" aria-label="Slide 2">
                 </li>
                 <li type="button" data-bs-target="#candyCarousel" data-bs-slide-to="2" aria-label="Slide 3">
@@ -51,13 +52,11 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#candyCarousel"
-                    data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#candyCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden"></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#candyCarousel"
-                    data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#candyCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden"></span>
             </button>
@@ -66,43 +65,60 @@
     <div class="row">
         <h1 class="products-title">Ultimi Arrivati</h1>
     </div>
-    @{ Program.UpdateList(); }
-<div class="row">
+
     @{
-        for (int i = 0; i < Program.products.Count; i++)
+        string prova2 = null;
+        prova2 = @Model.prova;
+        if (prova2 != null)
         {
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="box">
-                    <a asp-page="/Prodotto" asp-route-ID=@Program.products[i].nome>
-                        <div class="img-box">
-                            <img class="img-fluid candy-img" src="~/images/@Program.p.FormatCandy(Program.products[i].nome)" />
-                        </div>
-                        <div class="row detail-box">
-                            @{
-                                if (@Program.products[i].quantita > 0)
-                                {
-                                    <div class="col-12 text-center">
-                                        <h5 class="detail-text">@Program.products[i].nome</h5>
-                                    </div>
-                                    <div class="col-12 text-center">
-                                        <h5 class="detail-text">Prezzo: @Program.products[i].prezzo€</h5>
-                                    </div>
-                                }
-                                else
-                                {
-                                    <div class="col-12 text-center">
-                                        <h5 class="detail-text">@Program.products[i].nome</h5>
-                                    </div>
-                                    <div class="col-12 text-center">
-                                        <h5 class="detail-text" style="color: red;">Esaurito</h5>
-                                    </div>
-                                }
-                            }
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <p>Questo è il valore che è stato passato: @prova2</p>
+        }
+        else
+        {
+            <p>Non è stato passato alcun valore</p>
         }
     }
-</div>
+
+    @{
+        Program.UpdateList();
+    }
+    <div class="row">
+        @{
+            for (int i = 0; i < Program.products.Count; i++)
+            {
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <a asp-page="/Prodotto" asp-route-ID=@Program.products[i].nome>
+                            <div class="img-box">
+                                <img class="img-fluid candy-img"
+                            src="~/images/@Program.p.FormatCandy(Program.products[i].nome)" />
+                            </div>
+                            <div class="row detail-box">
+                                @{
+                                    if (@Program.products[i].quantita > 0)
+                                    {
+                                        <div class="col-12 text-center">
+                                            <h5 class="detail-text">@Program.products[i].nome</h5>
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <h5 class="detail-text">Prezzo: @Program.products[i].prezzo€</h5>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="col-12 text-center">
+                                            <h5 class="detail-text">@Program.products[i].nome</h5>
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <h5 class="detail-text" style="color: red;">Esaurito</h5>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        }
+    </div>
 </div>
