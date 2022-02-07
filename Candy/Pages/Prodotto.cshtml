@@ -26,12 +26,12 @@
                         <h5 class="quant-text-prodotto">Quantità:</h5>
                     </div>
                     <div class="col-7 col-sm-4 text-start">
-                        <button class="btn btn-primary btn-meno btn-prodotto"
+                        <button class="btn btn-primary btn-meno btn-prodotto" type="button"
                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                             <img class="img-fluid" src="~/images/meno.png" />
                         </button>
                         <input class="quantity" min="0" max="@Model.quant" id="quantProd" value="@Model.GetValue()" type="number">
-                        <button class="btn btn-primary btn-piu btn-prodotto"
+                        <button class="btn btn-primary btn-piu btn-prodotto" type="button"
                             onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                             <img class="img-fluid" src="~/images/piu.png" />
                         </button>
