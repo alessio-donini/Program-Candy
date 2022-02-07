@@ -66,10 +66,10 @@
         <h1 class="products-title">Ultimi Arrivati</h1>
     </div>
 
-    @{
-        string prova2 = null;
+    @*@{
+        int prova2 = -1;
         prova2 = @Model.prova;
-        if (prova2 != null)
+        if (prova2 != -1)
         {
             <p>Questo è il valore che è stato passato: @prova2</p>
         }
@@ -77,10 +77,14 @@
         {
             <p>Non è stato passato alcun valore</p>
         }
-    }
+    }*@
 
     @{
         Program.UpdateList();
+        if (@Model.quant != 0)
+        {
+            await Task.Factory.StartNew(() => Program.p.TogliProdotto(@Model.nome, @Model.quant, ref Program.products, ref Program.modifiedProducts));
+        }
     }
     <div class="row">
         @{

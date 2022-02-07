@@ -10,8 +10,17 @@ namespace Candy
         public Magazzino()
         {
         }
-        public void TogliProdotto()
+        public void TogliProdotto(string nome, int quant, ref List<Prodotto> products, ref bool modifiedProducts)
         {
+            for(int i = 0; i < products.Count; i++)
+            {
+                if(products[i].nome == nome)
+                {
+                    products[i].quantita -= quant;
+                    break;
+                }
+            }
+            modifiedProducts = false;
         }
         public void AggiungiProdottoCarrello()
         {

@@ -11,7 +11,8 @@ namespace Candy.Pages
 {
     public class IndexModel : PageModel
     {
-        public string prova;
+        public int quant = 0;
+        public string nome;
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)
@@ -22,9 +23,10 @@ namespace Candy.Pages
         public void OnGet()
         {
         }
-        public void OnPost(int quantProd)
+        public void OnPost(int quantProd, string nomeProd)
         {
-            this.prova = quantProd.ToString();
+            this.quant = quantProd;
+            this.nome = nomeProd;
         }
     }
 }
