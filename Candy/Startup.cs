@@ -13,6 +13,7 @@ namespace Candy
 {
     public class Startup
     {
+        public static bool adminRole = false;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;

@@ -36,9 +36,18 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="img-fluid navbar-brand" asp-page="/Accesso">
-                                <img class="adminimg" src="~/images/admin_icon.png" />
-                            </a>
+                            @if(Startup.adminRole)//controlla se l'utente ha fatto l'accesso
+                            {
+                                <a class="img-fluid navbar-brand" asp-page="/Amministrazione">
+                                    <img class="adminimg" src="~/images/admin_icon.png" />
+                                </a>
+                            }
+                            else
+                            {
+                                <a class="img-fluid navbar-brand" asp-page="/Accesso">
+                                    <img class="adminimg" src="~/images/admin_icon.png" />
+                                </a>
+                            }
                         </li>
                     </ul>
                 </div>

@@ -12,9 +12,5 @@ namespace Candy.Pages
         public void OnGet()
         {
         }
-        public void OnPost(string email, string pass)
-        {
-            System.Console.WriteLine("ciao");
-        }
     }
 }

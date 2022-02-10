@@ -28,5 +28,9 @@ namespace Candy.Pages
             this.quant = quantProd;
             this.nome = nomeProd;
         }
+        public void OnPostLogin(string email, string pass)
+        {
+            Startup.adminRole = true;
+        }
     }
 }
