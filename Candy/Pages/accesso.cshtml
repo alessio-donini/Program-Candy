@@ -4,31 +4,29 @@
     ViewData["Title"] = "Log In";
 }
 <div class="text-center">
-    <!--<div class="row">
-        <div class="login-container col-xs-10 offset-xs-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3">
-            <h1>CIAO</h1>
-        </div>
-    </div>-->
     <div class="row">
         <div class="col-12 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-6 offset-lg-3">
             <div class="access-container">
-                <form class="form-signin" method="get" action="https://localhost:44355/accesso">
+                <form asp-page="/Accesso" class="form-signin" method="post">
                     <img class="mb-4 img-profile" src="~/images/admin_icon.png">
-                    <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus value="">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required value="">
+                    <input type="text" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus value="">
+                    <input type="password" id="inputPassword" name="pass" class="form-control" placeholder="Password" required value="">
                     <button class="btn btn-lg btn-primary btn-block btn-accesso shadow-none" type="submit">Accedi</button>
                 </form>
             </div>
         </div>
-        <div class="prova">
-
-        </div>
     </div>
 </div>
-<!--<script LANGUAGE="JavaScript">
-        const arrayText = [];
-        function testResults(form) {
-            arrayText[0] = form.inputEmail.value;
-            arrayText[1] = form.inputPassword.value;
+<!--<script LANGUAGE="JavaScript" type="text/javascript">
+    const arrayText = [];
+    function testResults(form) {
+        arrayText[0] = form.inputEmail.value;
+        arrayText[1] = form.inputPassword.value;
+        if (arrayText[0] = !"") {
+            console.log(arrayText[0]);
         }
-    </script>-->
+        else {
+            console.log("ciAO");
+        }
+    }
+</script>-->
