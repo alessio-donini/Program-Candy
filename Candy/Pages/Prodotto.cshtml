@@ -5,10 +5,10 @@
 }
 @* su @page -> "{id}" per vsualizzare sul link l'id del parametro, questo inoltre sarà necessario per visualizzare la
     pagina*@
+@{
+    Program.UpdateList(); Model.GetProductData();
+}
 <div class="text-center">
-    @{
-        Program.UpdateList(); Model.GetProductData();
-    }
     <div class="row">
         <div class="col-12 col-lg-6">
             <img class="img-fluid img-prodotto" src="~/images/@Model.imgProdotto" />
