@@ -10,7 +10,7 @@ namespace Candy
         public Magazzino()
         {
         }
-        public void TogliProdotto(string nome, int quant, ref List<Prodotto> products, ref bool modifiedProducts)
+        public void TogliProdotto(string nome, int quant, ref List<Prodotto> products, ref bool modifiedProducts, ref string path)
         {
             for(int i = 0; i < products.Count; i++)
             {
@@ -20,7 +20,19 @@ namespace Candy
                     break;
                 }
             }
+            List<string> lines = File.ReadAllLines(path).ToList();
+            for(int i = 0; i < lines.Count; i++)
+            {
+                string[] item = lines[i].Split('|');
+                if(item[0] == nome)
+                {
+                    item[1] = (Convert.ToInt32(item[1]) - quant).ToString();
+                    lines[i] = $"{item[0]}|{item[1]}|{item[2]}";
+                    break;
+                }
+            }
             modifiedProducts = false;
+            File.WriteAllLines(path, lines);
         }
         public void AggiungiProdottoCarrello()
         {
