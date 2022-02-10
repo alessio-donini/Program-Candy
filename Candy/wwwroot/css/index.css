@@ -1,4 +1,4 @@
-* {
+   * {
     user-select: none;
 }
 
@@ -144,17 +144,6 @@ img {
         padding-bottom: 15%;
         font-size: 3.5vw;
     }
-
-    .box {
-        margin-top: 10%;
-        margin-left: 10%;
-        border-radius: 3vw;
-    }
-
-    .products-title {
-        margin-top: 8% !important;
-        margin-bottom: 4%;
-    }
 }
 
 @media screen and (min-width: 768px) { /* MD */
@@ -223,16 +212,7 @@ img {
     }
 
     .slide-text {
-        font-size: 24px;
         margin-top: 40%;
-    }
-
-    .detail-box {
-        margin-top: 2%;
-    }
-
-    .detail-text {
-        font-size: 1.8vw;
     }
 }
 
