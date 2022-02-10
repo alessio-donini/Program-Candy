@@ -83,7 +83,7 @@
         Program.UpdateList();
         if (@Model.quant != 0)
         {
-            await Task.Factory.StartNew(() => Program.p.TogliProdotto(@Model.nome, @Model.quant, ref Program.products, ref Program.modifiedProducts));
+            await Task.Factory.StartNew(() => Program.p.TogliProdotto(@Model.nome, @Model.quant, ref Program.products, ref Program.modifiedProducts, ref Program.path));
         }
     }
     <div class="row">
