@@ -1,11 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.IO;
+
 
 namespace Candy.Pages
 {
@@ -30,7 +25,14 @@ namespace Candy.Pages
         }
         public void OnPostLogin(string email, string pass)
         {
-            Startup.adminRole = true;
+            if (email == "admin" && pass == "admin")
+            {
+                Startup.adminRole = true;
+            }
+        }
+        public void OnPostExit(string ciao)
+        {
+            Startup.adminRole = false;
         }
     }
 }

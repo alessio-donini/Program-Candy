@@ -3,7 +3,7 @@
 @{
 }
 <div class="text-center adm-page">
-    @for(int i = 0; i < 10; i++)
+    @for (int i = 0; i < 10; i++)
     {
         <div class="row">
             <div class="col-12 box-admin">
@@ -11,4 +11,8 @@
             </div>
         </div>
     }
+    <form asp-page="/Index" asp-page-handler="Exit" class="form-signout" method="post">
+        <button class="btn btn-primary btn1" type="submit" onclick="Exit">Esci</button>
+    </form>
+
 </div>
