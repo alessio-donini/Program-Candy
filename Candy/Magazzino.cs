@@ -34,8 +34,29 @@ namespace Candy
             modifiedProducts = false;
             File.WriteAllLines(path, lines);
         }
-        public void AggiungiProdottoCarrello()
+        public void AggiungiProdottoCarrello(string nome, int quant, double prez, ref List<Prodotto> carrello)
         {
+            if(carrello.Count != 0)
+            {
+                bool trovato = false;
+                for (int i = 0; i < carrello.Count; i++)
+                {
+                    if (carrello[i].nome == nome)
+                    {
+                        carrello[i].quantita += quant;
+                        trovato = true;
+                        break;
+                    }
+                }
+                if (!trovato)
+                {
+                    carrello.Add(new Prodotto { nome = nome, quantita = quant, prezzo = prez });
+                }
+            }
+            else
+            {
+                carrello.Add(new Prodotto { nome = nome, quantita = quant, prezzo = prez });
+            }
         }
         public void TogliProdottoCarrello()
         {

@@ -1,10 +1,4 @@
-﻿.login-container{
-    margin-top: 400px !important;
-    background-color: black;
-    height: 100px;
-}
-
-.img-profile{
+﻿.img-profile{
     width: 120px;
     margin-top: 250px;
 }
@@ -22,7 +16,7 @@
     width: 100%;
     max-width: 330px;
     height:auto;
-    padding: 15px;
+    padding: 13px;
     margin: 0 auto;
 }
 .img-profile{
@@ -53,10 +47,22 @@
     border-top-right-radius: 0;
 }
 
-.access-container {
-    margin-left: 15%;
-    width: 70%;
-    margin-top: 120px;
-    background-color: #faf9fa;
-    border-radius: 7%;
+@media screen and (max-width: 1400px) { /* <=1400px */
+    .access-container {
+        margin-left: 15%;
+        width: 70%;
+        margin-top: 120px;
+        background-color: #faf9fa;
+        border-radius: 7%;
+    }
+}
+@media screen and (min-width: 1400px) { /* >1400px */
+    .access-container {
+        margin-left: 15%;
+        width: 73%;
+        margin-top: 140px;
+        background-color: #faf9fa;
+        border-radius: 50px;
+        height: 80%;
+    }
 }
