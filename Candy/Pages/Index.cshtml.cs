@@ -18,7 +18,7 @@ namespace Candy.Pages
         public void OnGet()
         {
         }
-        public void OnPost(int quantProd, string nomeProd, int prezProd, string btn)
+        public void OnPost(int quantProd, string nomeProd, double prezProd, string btn)
         {
             this.prod.quantita = quantProd;
             this.prod.nome = nomeProd;
