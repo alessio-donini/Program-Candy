@@ -20,4 +20,9 @@ Inizio fix pagina del prodotto (28/12/2022)
 
 Pagina del prodotto 90% completata (03/02/2022)
 Creata pagina di accesso (03/02/2022)
-
+Creata pagina carrello, adattata la pagina del prodotto fino a schermi "small"(SM), pagina prodotto completamente riadattata(04/02/2022)
+Post funzionante, Aggiornameto sugli aquisti dei prodotti funzionante(07/02/2022)
+Fix pulsante carrello(09/02/2022)
+se un prodotto viene acquistato, questo viene aggiornato nel file e nella lista che contengono i dati, tolto codice ridondante, inizio pagina di amministrazione, controllo admin role(10/02/2022)
+aggiunta prodotti al carrello(11/02/2022)
+Fix prezzo prodotto Carrello, il carrello riceve i prezzi corretti, inizio pagina del carrello, creazione footer(12/02/2022)
