@@ -1,5 +1,7 @@
-﻿.box-admin{
-    background-color: grey;
+﻿.box-nome,.box-quantità,.box-restock{
+    background-color: grey !important;
+    height:100% !important;
+    border-color:black;
 }
 .adm-page{
     margin-top: 10%;
