@@ -59,6 +59,7 @@ button.accept-policy {
 html {
   position: relative;
   min-height: 100%;
+  height:auto;
 }
 
 body {
@@ -67,7 +68,7 @@ body {
 }
 
 .body {
-  margin-bottom: 60px;
+  margin-bottom: 300px;
 }
 /*.footer {
     position: absolute;
@@ -120,6 +121,7 @@ h1 {
 */
 
 .footer {
+  width:100%;
   border-top: 1px solid #c99d66; /* primary-color */
   text-align: center;
   padding: 30px 10px;
@@ -127,6 +129,8 @@ h1 {
   font-size: 0.8em;
   background-color: black; /* primary color*/
   color: #fff;
+  position:absolute;
+  bottom:0;
 }
 
 footer a {
