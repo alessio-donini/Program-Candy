@@ -1,4 +1,12 @@
 ﻿.item-carrello{
     background-color: lightgrey;
-    margin-top: 100px !important;
+}
+.carrello-list {
+    margin-top: 7% !important;
+}
+.img-cart-prod{
+    width: 80%;
+}
+.nome-prod-list{
+    line-height: 7vw !important;
 }
