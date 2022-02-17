@@ -4,16 +4,40 @@
     ViewData["Title"] = "Carrello";
 }
 <div class="text-center">
-    <div class="col-9">
-        <div class="row">
-            <div class="col-10 offset-1 item-carrello">
-                <p>Carrello item</p>
-            </div>
+    <div class="row carrello-list">
+        <div class="col-9">
+            @*@for(int i = 0; i < @Startup.carrello.Count; i++)*@
+            @for (int i = 0; i < 3; i++)
+            {
+                    <div class="row">
+                        <div class="col-10 offset-1 item-carrello">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img class="img-fluid img-cart-prod"
+                                src="~/images/@Program.p.FormatCandy(Program.products[i].nome)" />
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="nome-prod-list">@Program.products[i].nome</h3>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-primary btn-meno btn-prodotto" type="button"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                    <img class="img-fluid" src="~/images/meno.png" />
+                                    </button>
+                                    <input class="quantity" min="0" max="@Program.products[i].quantita" name="quantProd" value="@Startup.carrello[i].quantita"
+                                        type="number">
+                                    <button class="btn btn-primary btn-piu btn-prodotto" type="button"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                    <img class="img-fluid" src="~/images/piu.png" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            }
         </div>
-    </div>
-    <div class="col-3">
-        <div class="row">
-            <div class="col-10 offset-1 item-carrello">
+        <div class="col-3">
+            <div class="col-11 item-carrello">
                 <p>Carrello item</p>
             </div>
         </div>
