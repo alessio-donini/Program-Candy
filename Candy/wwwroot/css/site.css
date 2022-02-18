@@ -127,7 +127,7 @@ h1 {
   padding: 30px 10px;
   line-height: 1.6em;
   font-size: 0.8em;
-  background-color: black; /* primary color*/
+  background-color: #ADADAD; /* primary color*/
   color: #fff;
   position:absolute;
   bottom:0;
@@ -181,3 +181,6 @@ footer .social-cont .social-list li img {
 footer .social-cont .social-list > li:hover {
   background: #ff968c; /* light seconday color*/
 }
+    #image:hover{
+        opacity: 0,3;
+    }

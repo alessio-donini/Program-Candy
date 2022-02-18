@@ -1,8 +1,8 @@
 Orsetti|0|5,99
-Coccodrilli|96|5,99
+Coccodrilli|95|5,99
 Fragole|95|5,99
 Coca Cole|100|5,99
-Rotelle|100|5,99
+Rotelle|99|5,99
 Marshmellow|100|5,99
 Uova|100|5,99
 Angurie|100|5,99
