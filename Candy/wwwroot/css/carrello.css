@@ -1,12 +1,32 @@
-﻿.item-carrello{
-    background-color: lightgrey;
+﻿.row-below-first {
+  margin-top: 1% !important;
 }
 .carrello-list {
-    margin-top: 7% !important;
+  margin-top: 7% !important;
 }
-.img-cart-prod{
-    width: 80%;
+.img-cart-prod {
+  width: 60%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
-.nome-prod-list{
-    line-height: 7vw !important;
+.nome-prod-list {
+  line-height: 10vw !important;
+}
+
+.list-item {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 10px;
+}
+.btn-quantita {
+  margin-top: 6% !important;
+}
+.btn-list-carrello {
+  width: 70%;
+  height: 50%;
+  margin-top: 12%;
+  border-radius: 10px !important;
+  background-color: lightgreen !important;
+  border-style: none !important;
 }
