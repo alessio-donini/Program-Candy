@@ -1,7 +1,26 @@
-﻿.box-nome,.box-quantità,.box-restock{
+﻿.box-nome{
     background-color: grey !important;
-    height:100% !important;
-    border-color:black;
+    height: 100% !important;
+    border-color: black !important;
+    border-width: 1px !important;
+    border-style:solid;
+}
+.box-quantità {
+    background-color: grey !important;
+    height: 100% !important;
+    border-color: black !important;
+    border-width: 1px !important;
+    border-style: solid;
+}
+.box-restock {
+    background-color: grey !important;
+    height: 100% !important;
+    border-color: black !important;
+    border-width: 1px !important;
+    border-style: solid;
+}
+.box-container{
+    margin:0px;
 }
 .adm-page{
     margin-top: 10%;
