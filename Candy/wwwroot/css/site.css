@@ -59,7 +59,7 @@ button.accept-policy {
 html {
   position: relative;
   min-height: 100%;
-  height:auto;
+  height: auto;
 }
 
 body {
@@ -121,16 +121,16 @@ h1 {
 */
 
 .footer {
-  width:100%;
+  width: 100%;
   border-top: 1px solid #c99d66; /* primary-color */
   text-align: center;
   padding: 30px 10px;
   line-height: 1.6em;
   font-size: 0.8em;
-  background-color: #ADADAD; /* primary color*/
+  background-color: #adadad; /* primary color*/
   color: #fff;
-  position:absolute;
-  bottom:0;
+  position: absolute;
+  bottom: 0;
 }
 
 footer a {
@@ -168,19 +168,45 @@ footer .social-cont .social-list > li {
   margin: 8px 8px 8px 0;
   display: inline-block;
   vertical-align: top;
-  height: 32px;
-  width: 32px;
+  height: 40px;
+  width: 40px;
   border-radius: 6em;
-  background-color: #f0776c; /* secondary-color*/
+}
+
+.instagram-img,
+.twitter-img,
+.facebook-img {
+  margin-top: 12%;
 }
 
 footer .social-cont .social-list li img {
   width: 32px;
 }
-
-footer .social-cont .social-list > li:hover {
-  background: #ff968c; /* light seconday color*/
+footer .social-cont .social-list > li.instagram-img {
+  /* Instagram */
+  background: #dd877f;
 }
-    #image:hover{
-        opacity: 0,3;
-    }
+footer .social-cont .social-list > li.twitter-img {
+  /* Twitter */
+  background: #64d2f3;
+}
+footer .social-cont .social-list > li.facebook-img {
+  /* Facebook */
+  background: #2b3fac;
+}
+
+/* Quando ci vai sopra con il cursore del mouse */
+footer .social-cont .social-list > li.instagram-img:hover {
+  /* Instagram */
+  background: #dfb0ac;
+}
+
+footer .social-cont .social-list > li.twitter-img:hover {
+  /* Twitter */
+  background: #99d6e9;
+}
+
+footer .social-cont .social-list > li.facebook-img:hover {
+  /* Facebook */
+  background: #5765b3;
+}
