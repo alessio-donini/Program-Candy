@@ -21,5 +21,15 @@ namespace Candy.Pages
             this.prod.prezzo = prezProd;
             this.action = btn;
         }
+        [DisableRequestSizeLimit]
+        private int FindProd(string nome, List<Prodotto> products)
+        {
+            for (int i = 0; i < products.Count; i++)
+            {
+                if (nome == products[i].nome)
+                    return i;
+            }
+            return 0; // non succederà mai
+        }
     }
 }

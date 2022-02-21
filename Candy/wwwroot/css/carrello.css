@@ -18,16 +18,19 @@
   border-color: black;
   border-width: 0 0 1px 0;
   background-color: #f8f4f0;
-  border-radius: 10px 10px 0 0;
+  border-radius: 15px 15px 0 0;
 }
 .btn-quantita {
-  margin-top: 6% !important;
+  margin-top: 10% !important;
 }
 .btn-list-carrello {
-  width: 70%;
+  width: 90%;
   height: 40%;
-  margin-top: 14%;
+  margin-top: 30%;
   border-radius: 10px !important;
   background-color: lightgreen !important;
   border-style: none !important;
+}
+input.carrello-list-quant{
+  background-color: #f8f4f0;
 }

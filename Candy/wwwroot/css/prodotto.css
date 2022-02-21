@@ -1,256 +1,267 @@
 ﻿input.quantity {
-    border: none;
-    text-align: center;
-    width: 3rem;
-    height: 3rem;
-    padding: 0;
-    overflow: visible;
+  border: none;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  overflow: visible;
 }
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .btn-prodotto {
-    background-color: rgb(177 232 98) !important;
-    border-color: transparent !important;
+  background-color: rgb(177 232 98) !important;
+  border-color: transparent !important;
 }
 
-.quant-text-prodotto{
-    text-align: right;
+.quant-text-prodotto {
+  text-align: right;
 }
 
-@media screen and (max-width: 321px) { /* XXS --> iPhone 5/SE */
-    .btn-carrello {
-        width: 80% !important;
-    }
-    .disp-text-prodotto {
-        font-size: 5.3vw !important;
-    }
-    .disp-prodotto {
-        margin-bottom: 13% !important;
-    }
-    .quant-text-prodotto {
-        padding-top: 20% !important;
-    }
-    .sez-quant {
-        margin-bottom: 6% !important;
-    }
+.nome-prodotto {
+  color: black;
 }
 
-@media screen and (max-width: 575px) { /* XS */
-    .img-prodotto {
-        width: 90%;
-        margin-top: 25%;
-    }
-
-    .info-prodotto {
-        margin-top: 13% !important;
-    }
-
-    .nome-prodotto {
-        font-size: 12vw;
-    }
-
-    .disp-prodotto {
-        margin-top: 5% !important;
-    }
-
-    .disp-text-prodotto {
-        font-size: 4.4vw;
-    }
-
-    .quant-text-prodotto {
-        padding-top: 8%;
-    }
-
-    .prezzo-text {
-        padding-top: 6%;
-        font-size: 6.4vw;
-    }
-
-    .sez-quant {
-        margin-top: 7% !important;
-    }
-
-    .sez-acquisto {
-        margin-top: 3% !important;
-    }
-
-    .btn-meno {
-        width: 40px;
-    }
-
-    .btn-piu {
-        width: 40px;
-    }
-
-    .btn-compra {
-        width: 150%;
-        font-size: 5vw !important;
-    }
-
-    .btn-carrello {
-        width: 60%;
-    }
+@media screen and (max-width: 321px) {
+  /* XXS --> iPhone 5/SE */
+  .btn-carrello {
+    width: 80% !important;
+  }
+  .disp-text-prodotto {
+    font-size: 5.3vw !important;
+  }
+  .disp-prodotto {
+    margin-bottom: 13% !important;
+  }
+  .quant-text-prodotto {
+    padding-top: 20% !important;
+  }
+  .sez-quant {
+    margin-bottom: 6% !important;
+  }
 }
 
-@media screen and (min-width: 576px) and (max-width: 767px) { /* SM */
-    .img-prodotto {
-        width: 80%;
-        margin-top: 13%;
-    }
+@media screen and (max-width: 575px) {
+  /* XS */
+  .img-prodotto {
+    width: 90%;
+    margin-top: 25%;
+  }
 
-    .info-prodotto {
-        margin-top: 10% !important;
-    }
+  .info-prodotto {
+    margin-top: 13% !important;
+  }
 
-    .nome-prodotto {
-        font-size: 7vw;
-    }
+  .nome-prodotto {
+    font-size: 12vw;
+  }
 
-    .disp-prodotto {
-        margin-top: 3% !important;
-    }
+  .disp-prodotto {
+    margin-top: 5% !important;
+  }
 
-    .disp-text-prodotto {
-        font-size: 3.4vw;
-    }
+  .disp-text-prodotto {
+    font-size: 4.4vw;
+  }
 
-    .quant-text-prodotto {
-        padding-top: 8%;
-    }
+  .quant-text-prodotto {
+    padding-top: 8%;
+  }
 
-    .prezzo-text {
-        padding-top: 6%;
-        font-size: 4.7vw;
-    }
+  .prezzo-text {
+    padding-top: 6%;
+    font-size: 6.4vw;
+  }
 
-    .sez-quant {
-        margin-top: 3% !important;
-    }
+  .sez-quant {
+    margin-top: 7% !important;
+  }
 
-    .sez-acquisto {
-        margin-top: 2% !important;
-    }
+  .sez-acquisto {
+    margin-top: 3% !important;
+  }
 
-    .btn-meno {
-        width: 40px;
-    }
+  .btn-meno {
+    width: 40px;
+  }
 
-    .btn-piu {
-        width: 40px;
-    }
+  .btn-piu {
+    width: 40px;
+  }
 
-    .btn-compra {
-        width: 150%;
-        font-size: 4vw !important;
-    }
+  .btn-compra {
+    width: 150%;
+    font-size: 5vw !important;
+  }
 
-    .btn-carrello {
-        width: 45%;
-    }
+  .btn-carrello {
+    width: 60%;
+  }
 }
 
-@media screen and (min-width: 768px) { /* MD */
-    .img-prodotto {
-        width: 65%;
-        margin-top: 10%;
-    }
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  /* SM */
+  .img-prodotto {
+    width: 80%;
+    margin-top: 13%;
+  }
 
-    .info-prodotto {
-        margin-top: 5% !important;
-    }
+  .info-prodotto {
+    margin-top: 10% !important;
+  }
 
-    .disp-prodotto {
-        margin-top: 3% !important;
-    }
+  .nome-prodotto {
+    font-size: 7vw;
+  }
 
-    .quant-text-prodotto {
-        padding-top: 5%;
-    }
+  .disp-prodotto {
+    margin-top: 3% !important;
+  }
 
-    .prezzo-text {
-        padding-top: 6%;
-        font-size: 2.8vw;
-    }
+  .disp-text-prodotto {
+    font-size: 3.4vw;
+  }
 
-    .sez-quant {
-        margin-top: 3% !important;
-    }
+  .quant-text-prodotto {
+    padding-top: 8%;
+  }
 
-    .sez-acquisto {
-        margin-top: 2% !important;
-    }
+  .prezzo-text {
+    padding-top: 6%;
+    font-size: 4.7vw;
+  }
 
-    .btn-meno {
-        width: 40px;
-    }
+  .sez-quant {
+    margin-top: 3% !important;
+  }
 
-    .btn-piu {
-        width: 40px;
-    }
+  .sez-acquisto {
+    margin-top: 2% !important;
+  }
 
-    .btn-compra {
-        width: 150%;
-    }
+  .btn-meno {
+    width: 40px;
+  }
 
-    .btn-carrello {
-        width: 30%;
-    }
+  .btn-piu {
+    width: 40px;
+  }
+
+  .btn-compra {
+    width: 150%;
+    font-size: 4vw !important;
+  }
+
+  .btn-carrello {
+    width: 45%;
+  }
 }
 
-@media screen and (min-width: 992px) { /* LG */
-    .img-prodotto {
-        width: 85%;
-        margin-top: 25%;
-        margin-right: 6%;
-    }
+@media screen and (min-width: 768px) {
+  /* MD */
+  .img-prodotto {
+    width: 65%;
+    margin-top: 10%;
+  }
 
-    .info-prodotto {
-        margin-top: 13% !important;
-    }
+  .info-prodotto {
+    margin-top: 5% !important;
+  }
 
-    .prezzo-text {
-        font-size: 2.1vw;
-    }
+  .disp-prodotto {
+    margin-top: 3% !important;
+  }
 
-    .sez-quant {
-        margin-top: 6% !important;
-    }
+  .quant-text-prodotto {
+    padding-top: 5%;
+  }
 
-    .btn-carrello {
-        width: 50%;
-    }
+  .prezzo-text {
+    padding-top: 6%;
+    font-size: 2.8vw;
+  }
+
+  .sez-quant {
+    margin-top: 3% !important;
+  }
+
+  .sez-acquisto {
+    margin-top: 2% !important;
+  }
+
+  .btn-meno {
+    width: 40px;
+  }
+
+  .btn-piu {
+    width: 40px;
+  }
+
+  .btn-compra {
+    width: 150%;
+  }
+
+  .btn-carrello {
+    width: 30%;
+  }
 }
 
-@media screen and (min-width: 1200px) { /* XL */
-    .img-prodotto {
-        width: 70%;
-        margin-top: 20%;
-        margin-right: 20%;
-    }
+@media screen and (min-width: 992px) {
+  /* LG */
+  .img-prodotto {
+    width: 85%;
+    margin-top: 25%;
+    margin-right: 6%;
+  }
 
-    .info-prodotto {
-        margin-top: 10% !important;
-    }
+  .info-prodotto {
+    margin-top: 13% !important;
+  }
 
-    .prezzo-text {
-        padding-top: 6%;
-        font-size: 2.3vw;
-    }
+  .prezzo-text {
+    font-size: 2.1vw;
+  }
+
+  .sez-quant {
+    margin-top: 6% !important;
+  }
+
+  .btn-carrello {
+    width: 50%;
+  }
 }
 
-@media screen and (min-width: 1400px) { /* XXL */
-    .img-prodotto {
-        width: 60%;
-        margin-top: 13%;
-    }
-    .info-prodotto {
-        margin-top: 8% !important;
-    }
-    .prezzo-text{
-        padding-top: 5%;
-    }
+@media screen and (min-width: 1200px) {
+  /* XL */
+  .img-prodotto {
+    width: 70%;
+    margin-top: 20%;
+    margin-right: 20%;
+  }
+
+  .info-prodotto {
+    margin-top: 10% !important;
+  }
+
+  .prezzo-text {
+    padding-top: 6%;
+    font-size: 2.3vw;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  /* XXL */
+  .img-prodotto {
+    width: 60%;
+    margin-top: 13%;
+  }
+  .info-prodotto {
+    margin-top: 8% !important;
+  }
+  .prezzo-text {
+    padding-top: 5%;
+  }
 }

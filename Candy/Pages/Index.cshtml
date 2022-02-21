@@ -5,17 +5,19 @@
 }
 @{
     Program.UpdateList();
-   if(@Model.prod.quantita != 0)
-   {
-       if (@Model.action == "compra")
-   {
-       await Task.Factory.StartNew(() => Program.p.TogliProdotto(@Model.prod.nome, @Model.prod.quantita, ref Program.products, ref Program.modifiedProducts, ref Program.path));
-   }
-   else if(@Model.action == "carrello")
-   {
-       await Task.Factory.StartNew(() => Program.p.AggiungiProdottoCarrello(@Model.prod.nome, @Model.prod.quantita, @Model.prod.prezzo, ref Startup.carrello));
-   }
-   }
+    if (@Model.prod.quantita != 0)
+    {
+        if (@Model.action == "compra")
+        {
+            await Task.Factory.StartNew(() => Program.p.TogliProdotto(@Model.prod.nome, @Model.prod.quantita, ref Program.products,
+            ref Program.modifiedProducts, ref Program.path));
+        }
+        else if (@Model.action == "carrello")
+        {
+            await Task.Factory.StartNew(() => Program.p.AggiungiProdottoCarrello(@Model.prod.nome, @Model.prod.quantita,
+            @Model.prod.prezzo, ref Startup.carrello));
+        }
+    }
 }
 <div class="text-center">
     <div class="row">
