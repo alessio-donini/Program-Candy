@@ -41,7 +41,7 @@
                                             max="@Program.products[@Model.FindProd(Startup.carrello[i].nome, Program.products)].quantita"
                                             name="quantProd" value="@Startup.carrello[i].quantita" type="number">
                                             <button class="btn btn-primary btn-piu btn-prodotto shadow-none" type="button"
-                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                            onclick="Test()">
                                                 <img class="img-fluid" src="~/images/piu.png" />
                                             </button>
                                             <input type="hidden" name="nomeProd" value="@Startup.carrello[i].nome" />
@@ -69,6 +69,12 @@
         </div>
     </div>
 </div>
+@{
+    //dotnetHelper.invokeMethodAsync('Sample', 'Prova');
+}
+<form asp-page-handler="Print" method="post">
+   <button class="btn btn-default">CLICK ME</button>
+</form>
 <script>
     function Test(){
         this.parentNode.querySelector('input[type=number]').stepUp();
