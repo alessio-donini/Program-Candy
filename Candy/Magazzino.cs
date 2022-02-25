@@ -31,7 +31,7 @@ namespace Candy
                     break;
                 }
             }
-            modifiedProducts = false;
+            modifiedProducts = true;
             File.WriteAllLines(path, lines);
         }
         public void AggiungiProdottoCarrello(string nome, int quant, double prez, ref List<Prodotto> carrello)
