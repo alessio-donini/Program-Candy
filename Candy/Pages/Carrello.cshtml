@@ -10,8 +10,8 @@
 }
 <div class="text-center">
     <div class="row carrello-list">
-        <div class="col-9"> 
-            @for(int i = 0; i < @Startup.carrello.Count; i++)
+        <div class="col-9">
+            @for (int i = 0; i < @Startup.carrello.Count; i++)
             {
                 string margin = null;
                 if (i != 0)
@@ -28,12 +28,13 @@
                             <div class="col-2">
                                 <h3 class="nome-prod-list">@Startup.carrello[i].nome</h3>
                             </div>
-                            <iframe name="prova" style="display: none;"></iframe>
+                            <iframe name="acquisto" style="display: none;"></iframe>
                             <div class="col-7">
-                                <form asp-page="/Carrello" method="post" target="prova">
+                                <form asp-page="/Carrello" method="post" target="acquisto" id="acquisto">
                                     <div class="row">
                                         <div class="col-3 btn-quantita">
                                             <button class="btn btn-primary btn-meno btn-prodotto shadow-none" type="button"
+                                            name="btnQuant"
                                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                                                 <img class="img-fluid" src="~/images/meno.png" />
                                             </button>
@@ -41,7 +42,8 @@
                                             max="@Program.products[@Model.FindProd(Startup.carrello[i].nome, Program.products)].quantita"
                                             name="quantProd" value="@Startup.carrello[i].quantita" type="number">
                                             <button class="btn btn-primary btn-piu btn-prodotto shadow-none" type="button"
-                                            onclick="Test()">
+                                            name="btnQuant"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp();">
                                                 <img class="img-fluid" src="~/images/piu.png" />
                                             </button>
                                             <input type="hidden" name="nomeProd" value="@Startup.carrello[i].nome" />
@@ -55,7 +57,8 @@
                                             type="submit" name="btn" value="compra">Compra</button>
                                         </div>
                                         <div class="col-2">
-                                        <button id="rimuovi" type="button"  data-automation="desktop-remove-item-button" name="remove-item-button">Rimuovi</button>
+                                            <button id="rimuovi" type="button" data-automation="desktop-remove-item-button"
+                                            name="remove-item-button">Rimuovi</button>
                                         </div>
                                     </div>
                                 </form>
@@ -72,14 +75,5 @@
         </div>
     </div>
 </div>
-@{
-    //dotnetHelper.invokeMethodAsync('Sample', 'Prova');
-}
-<form asp-page-handler="Print" method="post">
-   <button class="btn btn-default">CLICK ME</button>
-</form>
-<script>
-    function Test(){
-        this.parentNode.querySelector('input[type=number]').stepUp();
-    }
-</script>
+<button form="acquisto" class="btn btn-primary btn-compra btn-list-carrello shadow-none" type="submit" name="btn"
+    value="prova">Compra</button>

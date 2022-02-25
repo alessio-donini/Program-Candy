@@ -31,13 +31,13 @@
   background-color: lightgreen !important;
   border-style: none !important;
 }
-input.carrello-list-quant{
+input.carrello-list-quant {
   background-color: #f8f4f0;
 }
 #rimuovi {
-    margin-top: 84px;
-    color:white;
-    background-color: yellowgreen !important;
-    border-radius: 10px !important;
-    border-style: none !important;
+  margin-top: 84px;
+  color: white;
+  background-color: yellowgreen !important;
+  border-radius: 10px !important;
+  border-style: none !important;
 }
