@@ -22,15 +22,6 @@ namespace Candy.Pages
             this.prod.prezzo = prezProd;
             this.action = btn;
         }
-        public string print()
-        {
-            return "WELCOME!";
-        }
-
-        public async Task OnPostPrint()
-        {
-            print();
-        }
         public int FindProd(string nome, List<Prodotto> products) // trova un determinato prodotto
         {
             for (int i = 0; i < products.Count; i++)
@@ -40,10 +31,5 @@ namespace Candy.Pages
             }
             return 0; // non succederà mai
         }
-        /*[JSInvokable("Sample")]
-        public void Prova()
-        {
-            Console.WriteLine("ciao");
-        }*/
     }
 }
