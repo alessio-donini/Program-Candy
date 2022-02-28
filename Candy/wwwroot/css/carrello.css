@@ -31,6 +31,14 @@
   background-color: lightgreen !important;
   border-style: none !important;
 }
-input.carrello-list-quant{
+input.carrello-list-quant {
   background-color: #f8f4f0;
+}
+.rimuovi {
+  margin-top: 68%;
+  width: 50%;
+  color: white;
+  background-color: rgb(221, 80, 80) !important;
+  border-radius: 10px !important;
+  border-style: none !important;
 }
