@@ -70,14 +70,6 @@ body {
 .body {
   margin-bottom: 300px;
 }
-/*.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
-    line-height: 60px;Vertically center the text there
-    background-color: #ADADAD;
-}*/
 
 img {
   vertical-align: middle;
@@ -95,64 +87,39 @@ ul li {
   list-style: none;
 }
 
-/*html, body {
-    font-family: 'Roboto Slab', serif;
-    color: #666 /*color-text;
-    height: 100%;
-    width: 100%;
-}*/
-
-h1 {
-  font-size: 1.5em;
-  text-align: left;
-  font-weight: bold;
-  color: #a24038 /* primary color*/;
-}
-
-/*
-
-.contenitore .contenuto {
-    max-width: 1200px;
-    margin: auto;
-    padding: 70px 10px;
-    padding-bottom: 70px;
-}
-
-*/
-
 .footer {
-  width: 100%;
-  border-top: 1px solid #c99d66; /* primary-color */
-  text-align: center;
-  padding: 30px 10px;
-  line-height: 1.6em;
-  font-size: 0.8em;
-  background-color: #adadad; /* primary color*/
-  color: #fff;
-  position: absolute;
-  bottom: 0;
+    width: 100%;
+    border-top: 1px solid #c99d66; /* primary-color */
+    text-align: center;
+    padding: 30px 10px;
+    line-height: 1.6em;
+    font-size: 0.8em;
+    background-color: #ffe58f; /* primary color #adadad*/
+    color: #fff;
+    position: absolute;
+    bottom: 0;
 }
 
 footer a {
-  color: #f0776c; /* secondary-color*/
+  color: black; /* secondary-color*/
 }
 
-footer a:hover {
-  color: #ff968c; /* light seconday color*/
-}
+    footer a:hover {
+        color: #292929; /* lighter seconday color*/
+    }
 
 footer .credits {
   max-width: 300px;
   margin: auto;
 }
 
-footer .credits a img {
+/*footer .credits a img {
   -o-transition: opacity 0.2 ease-in;
   -ms-transition: opacity 0.2s ease-in;
   -moz-transition: opacity 0.2s ease-in;
   -webkit-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease;
-}
+}*/
 
 footer .credits a img:hover {
   opacity: 0.6;
@@ -175,40 +142,26 @@ footer .social-cont .social-list > li {
 
 .instagram-img,
 .twitter-img,
-.facebook-img {
-  margin-top: 0px;
+.facebook-img{
+    margin-top: 0px;
 }
 
 footer .social-cont .social-list li img {
   width: 40px;
 }
-footer .social-cont .social-list > li.instagram-img {
+footer .social-cont .social-list > li.instagram-img:hover {
     /* Instagram */
-    background: #adadad;
-}
-footer .social-cont .social-list > li.twitter-img {
-    /* Twitter */
-    background: #adadad;
-}
-footer .social-cont .social-list > li.facebook-img {
-    /* Facebook */
-    background: #adadad;
-}
-
-/* Quando ci vai sopra con il cursore del mouse */
-footer .social-cont .social-list > li.instagram-img:hover  {
-    /* Instagram */
-    background: #d1d1d1;
+    background: #e804c0;
 }
 
 footer .social-cont .social-list > li.twitter-img:hover {
     /* Twitter */
-    background: #d1d1d1;
+    background: #e804c0;
 }
 
 footer .social-cont .social-list > li.facebook-img:hover {
     /* Facebook */
-    background: #d1d1d1;
+    background: #e804c0;
 }
 
 footer .shipping .shipping-img {
