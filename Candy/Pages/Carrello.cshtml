@@ -101,15 +101,14 @@
         <div class="col-3">
             <div class="col-11 item-carrello">
                 <p>Carrello item</p>
+                <button class="btn btn-primary btn-compra btn-list-carrello shadow-none" type="submit" name="btn" value="prova">Compra</button>
             </div>
         </div>
     </div>
 </div>
-<button form="acquisto" class="btn btn-primary btn-compra btn-list-carrello shadow-none" type="submit" name="btn"
-    value="prova">Compra</button>
 @{
     double CalcolaPrezzo(double prezzo, int quantita)
     {
-        return prezzo * quantita;
+        return Math.Round((prezzo * quantita), 2);
     }
 }
