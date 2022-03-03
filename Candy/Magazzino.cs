@@ -12,19 +12,19 @@ namespace Candy
         }
         public void TogliProdotto(string nome, int quant, ref List<Prodotto> products, ref bool modifiedProducts, ref string path)
         {
-            for(int i = 0; i < products.Count; i++)
+            for (int i = 0; i < products.Count; i++)
             {
-                if(products[i].nome == nome)
+                if (products[i].nome == nome)
                 {
                     products[i].quantita -= quant;
                     break;
                 }
             }
             List<string> lines = File.ReadAllLines(path).ToList();
-            for(int i = 0; i < lines.Count; i++)
+            for (int i = 0; i < lines.Count; i++)
             {
                 string[] item = lines[i].Split('|');
-                if(item[0] == nome)
+                if (item[0] == nome)
                 {
                     item[1] = (Convert.ToInt32(item[1]) - quant).ToString();
                     lines[i] = $"{item[0]}|{item[1]}|{item[2]}";
@@ -36,7 +36,7 @@ namespace Candy
         }
         public void AggiungiProdottoCarrello(string nome, int quant, double prez, ref List<Prodotto> carrello)
         {
-            if(carrello.Count != 0)
+            if (carrello.Count != 0)
             {
                 bool trovato = false;
                 for (int i = 0; i < carrello.Count; i++)
@@ -58,8 +58,56 @@ namespace Candy
                 carrello.Add(new Prodotto { nome = nome, quantita = quant, prezzo = prez });
             }
         }
-        public void TogliProdottoCarrello()
+        public void TogliProdottoCarrello(string nome, int quant, double prez, ref List<Prodotto> carrello)
         {
+            if (carrello.Count != 0)
+            {
+                bool trovato = false;
+                for (int i = 0; i < carrello.Count; i++)
+                {
+                    if (carrello[i].nome == nome)
+                    {
+                        carrello[i].quantita += quant;
+                        trovato = true;
+                        break;
+                    }
+                }
+                if (!trovato)
+                {
+                    carrello.Remove(new Prodotto { nome = nome, quantita = quant, prezzo = prez });
+                }
+            }
+            else
+            {
+                carrello.Remove(new Prodotto { nome = nome, quantita = quant, prezzo = prez });
+            }
+        }
+        public void ModificaCarrello(string nome, int quant, double prez, ref List<Prodotto> carrello, string azione)
+        {
+            if (carrello.Count != 0)
+            {
+                bool trovato = false;
+                for (int i = 0; i < carrello.Count; i++)
+                {
+                    if (carrello[i].nome == nome)
+                    {
+                        carrello[i].quantita += quant;
+                        trovato = true;
+                        break;
+                    }
+                }
+                if (!trovato)
+                {
+                    if (azione == "elimina")
+                    {
+                        carrello.Remove(new Prodotto { nome = nome, quantita = quant, prezzo = prez });
+                    }
+                }
+            }
+            else
+            {
+                carrello.Remove(new Prodotto { nome = nome, quantita = quant, prezzo = prez });
+            }
         }
         public void Disponibilita(ref List<Prodotto> products, ref string path, ref bool modifiedProducts)
         {
