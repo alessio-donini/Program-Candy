@@ -34,7 +34,7 @@ namespace Candy
             modifiedProducts = true;
             File.WriteAllLines(path, lines);
         }
-        public void AggiungiProdottoCarrello(string nome, int quant, double prez, ref List<Prodotto> carrello)
+        public void ModificaCarrello(string nome, int quant, double prez, ref List<Prodotto> carrello, string azione)
         {
             if (carrello.Count != 0)
             {
@@ -43,7 +43,18 @@ namespace Candy
                 {
                     if (carrello[i].nome == nome)
                     {
-                        carrello[i].quantita += quant;
+                        if (azione == "elimina")
+                        {
+                            carrello.RemoveAt(i);
+                        }
+                        else if (azione == "ricarica")
+                        {
+                            carrello[i].quantita = quant;
+                        }
+                        else
+                        {
+                            carrello[i].quantita += quant;
+                        }
                         trovato = true;
                         break;
                     }
@@ -56,57 +67,6 @@ namespace Candy
             else
             {
                 carrello.Add(new Prodotto { nome = nome, quantita = quant, prezzo = prez });
-            }
-        }
-        public void TogliProdottoCarrello(string nome, int quant, double prez, ref List<Prodotto> carrello)
-        {
-            if (carrello.Count != 0)
-            {
-                bool trovato = false;
-                for (int i = 0; i < carrello.Count; i++)
-                {
-                    if (carrello[i].nome == nome)
-                    {
-                        carrello[i].quantita += quant;
-                        trovato = true;
-                        break;
-                    }
-                }
-                if (!trovato)
-                {
-                    carrello.Remove(new Prodotto { nome = nome, quantita = quant, prezzo = prez });
-                }
-            }
-            else
-            {
-                carrello.Remove(new Prodotto { nome = nome, quantita = quant, prezzo = prez });
-            }
-        }
-        public void ModificaCarrello(string nome, int quant, double prez, ref List<Prodotto> carrello, string azione)
-        {
-            if (carrello.Count != 0)
-            {
-                bool trovato = false;
-                for (int i = 0; i < carrello.Count; i++)
-                {
-                    if (carrello[i].nome == nome)
-                    {
-                        carrello[i].quantita += quant;
-                        trovato = true;
-                        break;
-                    }
-                }
-                if (!trovato)
-                {
-                    if (azione == "elimina")
-                    {
-                        carrello.Remove(new Prodotto { nome = nome, quantita = quant, prezzo = prez });
-                    }
-                }
-            }
-            else
-            {
-                carrello.Remove(new Prodotto { nome = nome, quantita = quant, prezzo = prez });
             }
         }
         public void Disponibilita(ref List<Prodotto> products, ref string path, ref bool modifiedProducts)

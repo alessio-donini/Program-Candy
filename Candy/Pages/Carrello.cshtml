@@ -19,13 +19,13 @@
         }
         else if (@Model.action == "elimina")
         {
-            await Task.Factory.StartNew(() => Program.p.AggiungiProdottoCarrello(@Model.prod.nome, @Model.prod.quantita,
-            @Model.prod.prezzo, ref Startup.carrello));
+            await Task.Factory.StartNew(() => Program.p.ModificaCarrello(@Model.prod.nome, @Model.prod.quantita,
+            @Model.prod.prezzo, ref Startup.carrello, "elimina"));
         }
         else if (@Model.action == "ricarica")
         {
-            await Task.Factory.StartNew(() => Program.p.AggiungiProdottoCarrello(@Model.prod.nome, @Model.prod.quantita,
-            @Model.prod.prezzo, ref Startup.carrello));
+            await Task.Factory.StartNew(() => Program.p.ModificaCarrello(@Model.prod.nome, @Model.prod.quantita,
+            @Model.prod.prezzo, ref Startup.carrello, "ricarica"));
         }
     }
     Program.UpdateList();
@@ -50,9 +50,8 @@
                             <div class="col-2">
                                 <h3 class="nome-prod-list">@Startup.carrello[i].nome</h3>
                             </div>
-                            <iframe name="acquisto" style="display: none;"></iframe>
                             <div class="col-7">
-                                <form asp-page="/Carrello" method="post" target="acquisto" id="acquisto">
+                                <form asp-page="/Carrello" method="post">
                                     <div class="row">
                                         <div class="col-3 btn-quantita">
                                             <button class="btn btn-primary btn-meno btn-prodotto shadow-none" type="button"
