@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Candy
+﻿namespace Candy
 {
     public class Amministrazione : Magazzino
     {
@@ -15,6 +10,10 @@ namespace Candy
         }
         public void ControlloCredenziali()
         {
+        }
+        public void REstock()
+        {
+            Startup.adminRole = false;
         }
     }
 }

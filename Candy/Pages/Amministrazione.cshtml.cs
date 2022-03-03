@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Candy.Pages
@@ -11,6 +6,22 @@ namespace Candy.Pages
     {
         public void OnGet()
         {
+        }
+        public void OnPost(string nomeProd, int quantProd)
+        {
+            int numProd = Program.products.Count + 1;
+            for (int i = 0; i < Program.products.Count; i++)
+            {
+                if (Program.products[i].nome == nomeProd)
+                {
+                    numProd = i;
+                    break;
+                }
+            }
+            if (numProd != (Program.products.Count + 1))
+            {
+                Program.products[numProd].quantita = 100;
+            }
         }
     }
 }

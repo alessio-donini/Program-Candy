@@ -9,20 +9,21 @@
             <div class="row">
                 <div class="col-10 offset-1 box-container">
 
-                    <form action="/" method="post">
+                    <form asp-page="/Amministrazione" method="post">
                         <div class="row element">
                             <div class="col-4 box-nome">
-                                <h6 class="text">@Program.products[i].nome</h6>
+                                <h6 class="text" id="@Program.products[i].nome">@Program.products[i].nome</h6>
                             </div>
                             <div class="col-4 box-quantità">
                                 <h6 class="text">@Program.products[i].quantita</h6>
                             </div>
+                            <input type="hidden" name="nomeProd" value="@Program.products[i].nome" />
+                            <input type="hidden" name="quantProd" value="@Program.products[i].quantita" />
                             <div class="col-4 box-restock">
-                                <button class="btn-restock" ></button>
+                                <button class="btn-restock" type="submit">restock</button>
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
         }

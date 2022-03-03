@@ -30,3 +30,15 @@
 .adm-page{
     margin-top: 10%;
 }
+.text{
+    margin-bottom:0px;
+}
+@media screen and (max-width: 575px) {
+    /* XS */
+    .container{
+        margin-top:65px;
+    }
+    .text{
+        margin-top:5px;
+    }
+}
