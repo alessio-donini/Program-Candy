@@ -154,6 +154,12 @@ img {
   }
 }
 
+.box {
+    margin-top: 10%;
+    margin-left: 10%;
+    border-radius: 3vw;
+}
+
 @media screen and (min-width: 768px) {
   /* MD */
   .logoimg {
