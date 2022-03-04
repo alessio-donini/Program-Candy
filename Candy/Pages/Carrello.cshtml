@@ -100,15 +100,31 @@
         </div>
         <div class="col-3">
             <div class="col-11 item-carrello">
-                <p>Carrello item</p>
-                <button class="btn btn-primary btn-compra btn-list-carrello shadow-none" type="submit" name="btn" value="prova">Compra</button>
+                <h3>Totale Carrello</h3>
+                <div class="row">
+                    <div class="col-3 justify-content-start">
+                        <h3>Totale:</h3>
+                    </div>
+                    <div class="col-3 justify-content-end">
+                        <h3>@CalcolaTotale(@Startup.carrello).ToString("N2")€</h3>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-compra btn-list-carrello shadow-none" type="submit" name="btn"
+                    value="prova">Compra</button>
             </div>
         </div>
     </div>
 </div>
 @{
-    double CalcolaPrezzo(double prezzo, int quantita)
+    double CalcolaPrezzo(double prezzo, int quantita)// arrotonda il valore a 2 cifre dopo la virgola
     {
         return Math.Round((prezzo * quantita), 2);
+    }
+    double CalcolaTotale(List<Prodotto> cart)// calcola il prezzo totale del carrello
+    {
+        double tot = 0;
+        for (int i = 0; i < cart.Count; i++)
+            tot += Math.Round((cart[i].prezzo * cart[i].quantita), 2);
+        return tot;
     }
 }
