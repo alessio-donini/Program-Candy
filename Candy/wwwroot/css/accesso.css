@@ -46,7 +46,11 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-
+@media screen and (max-width:576px) { /* <=1400px */
+    .access-container{
+        margin-bottom:50px !important;
+    }
+}
 @media screen and (max-width: 1400px) { /* <=1400px */
     .access-container {
         margin-left: 15%;
