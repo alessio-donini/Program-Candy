@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model CarrelloModel
 @{
     ViewData["Title"] = "Carrello";
@@ -79,10 +79,16 @@
                                             type="submit" name="btn" value="compra">Compra</button>
                                         </div>
                                         <div class="col-2">
-                                            <div class="col-12">
-                                                <button class="rimuovi" type="submit" name="btn" value="elimina">
-                                                    <img class="img-fluid" src="~/images/cestino.png" /></button>
-                                            </div>
+                                            <!--<div class="row">
+                                                <div class="col-12">
+                                                    <button class="rimuovi" type="submit" name="btn" value="elimina">
+                                                        <img class="img-fluid" src="~/images/cestino.png" /></button>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button class="ricarica" type="submit" name="btn" value="ricarica">
+                                                        <img class="img-fluid" src="~/images/reload.png" /></button>
+                                                </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </form>
@@ -121,4 +127,14 @@
             tot += Math.Round((cart[i].prezzo * cart[i].quantita), 2);
         return tot;
     }
+}
+
+//STYLE per ricarica btn
+.ricarica {
+  margin-top: 10%;
+  width: 50%;
+  color: white;
+  background-color: rgb(145, 208, 216) !important;
+  border-radius: 10px !important;
+  border-style: none !important;
 }

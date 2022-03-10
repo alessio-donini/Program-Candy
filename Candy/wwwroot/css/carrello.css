@@ -35,18 +35,10 @@ input.carrello-list-quant {
   background-color: #f8f4f0;
 }
 .rimuovi {
-  margin-top: 65%;
-  width: 50%;
+  margin-top: 70%;
+  width: 85%;
   color: white;
   background-color: rgb(221, 80, 80) !important;
-  border-radius: 10px !important;
-  border-style: none !important;
-}
-.ricarica {
-  margin-top: 10%;
-  width: 50%;
-  color: white;
-  background-color: rgb(145, 208, 216) !important;
   border-radius: 10px !important;
   border-style: none !important;
 }
