@@ -183,6 +183,7 @@ footer .social-cont .social-list > li.facebook-img:hover {
 footer .shipping .shipping-img {
     margin-top: 20px;
 }
+HEAD
 
 footer .risorse{
     margin-top: 20px;
@@ -239,7 +240,7 @@ footer .ris-list{
 
 @media screen and (min-width: 1200px) {
     footer .shipping .shipping-img {
-        margin-top: 20px;
+        margin-top: 10px;
         padding-left: 20px;
         width: 200px;
     }
@@ -251,4 +252,7 @@ footer .ris-list{
         margin-left: 0px;
         width: 200px;
     }
+footer .risorse{
+    margin-top:10px;
+}
 }
