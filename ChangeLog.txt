@@ -32,4 +32,6 @@ Modifiche parte grafica index(21/02/2022)
 Il carrelo si può visualizzare anche senza avere prodotti al suo interno, fixato bag dei prodotti in aggiornamento(24/02/2022)
 Inserito bottone per eliminare un prodotto dal carello, cambiata la scritta nel index, aggiunta immagine del cestino nel carrello(25/02/2022)
 Cambiate le immagini social del footer ma manca l'effetto hover(28/02/2022)
-funzione Restock funzionante, visuallizzabile il prezzo totale del carrello, funzione Modifica nel carrello funzionante, fix bag carrello(3/03/2022
+funzione Restock funzionante, visuallizzabile il prezzo totale del carrello, funzione Modifica nel carrello funzionante, fix bag carrello(3/03/2022)
+Footer finito, iniziato il processo di abbellimento del carrello (4/03/2022)
+tolto il tasto ricarica ed è stato sostituito con i tasti "aumenta prodotto" e "togli prodotto" nella schermata del carrello, inoltre è possibile digitando con la tastiera, cambiare il numero di prodotti nel carrello(10/03/2022)
