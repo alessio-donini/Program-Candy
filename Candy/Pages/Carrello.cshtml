@@ -14,7 +14,7 @@
     {
         if (@Model.action == "compra")
         {
-            await Task.Factory.StartNew(() => CompraItemCarrello());
+            await Task.Factory.StartNew(() => CompraItemCarrello(@Model.prod));
         }
         else if (@Model.action == "elimina")
         {
@@ -25,6 +25,9 @@
         {
             await Task.Factory.StartNew(() => Program.p.ModificaCarrello(@Model.prod.nome, @Model.prod.quantita,
             @Model.prod.prezzo, ref Startup.carrello, "ricarica"));
+        }
+        else if (@Model.action == "compra-tutto")
+        {
         }
     }
     Program.UpdateList();
@@ -123,11 +126,11 @@
             tot += Math.Round((cart[i].prezzo * cart[i].quantita), 2);
         return tot.ToString("N2");
     }
-    void CompraItemCarrello()
+    void CompraItemCarrello(Prodotto itemProd)
     {
-        Program.p.TogliProdotto(@Model.prod.nome, @Model.prod.quantita, ref Program.products,
+        Program.p.TogliProdotto(itemProd.nome, itemProd.quantita, ref Program.products,
         ref Program.modifiedProducts, ref Program.path);
-        Program.p.ModificaCarrello(@Model.prod.nome, @Model.prod.quantita,
-        @Model.prod.prezzo, ref Startup.carrello, "elimina");
+        Program.p.ModificaCarrello(itemProd.nome, itemProd.quantita,
+        itemProd.prezzo, ref Startup.carrello, "elimina");
     }
 }
