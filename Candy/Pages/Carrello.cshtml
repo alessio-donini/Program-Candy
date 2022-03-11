@@ -28,6 +28,8 @@
         }
         else if (@Model.action == "compra-tutto")
         {
+            await Task.Factory.StartNew(() => eliminaTutto(ref Startup.carrello));
+          
         }
     }
     Program.UpdateList();
@@ -53,7 +55,7 @@
                                 <h3 class="text-prod-list">@Startup.carrello[i].nome</h3>
                             </div>
                             <div class="col-12 col-xxl-7">
-                                <form asp-page="/Carrello" method="post">
+                                <form asp-page="/Carrello" method="post" id="cartForm">
                                     <div class="row">
                                         <div class="col-xl-3 btn-quantita">
                                             <button class="btn btn-primary btn-meno btn-prodotto shadow-none"
@@ -109,7 +111,7 @@
                     </div>
                 </div>
                 <button class="btn btn-primary btn-compra btn-list-carrello-all shadow-none" type="submit" name="btn"
-                    value="compra-tutto">Compra</button>
+                    value="compra-tutto" formtarget="cartForm" >Compra</button>
             </div>
         </div>
     </div>
@@ -133,4 +135,13 @@
         Program.p.ModificaCarrello(itemProd.nome, itemProd.quantita,
         itemProd.prezzo, ref Startup.carrello, "elimina");
     }
+    void eliminaTutto(ref List<Prodotto> cart)
+    {
+        for(int i=0;i<cart.Count;i++)
+        {
+            CompraItemCarrello(cart[i]);
+         }
+
+    }
+
 }
