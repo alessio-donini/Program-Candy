@@ -2,6 +2,11 @@
 @model Candy.Pages.AmministrazioneModel
 @{
 }
+@{ 
+    await Task.Factory.StartNew(() => Program.p.RestockProdotto(@Model.nome, 100, ref Program.products,
+            ref Program.modifiedProducts, ref Program.path));
+    Model.nome = null;
+}
 <div class="text-center adm-page">
     <div class="container">
         @for (int i = 0; i < @Program.products.Count; i++)
@@ -17,8 +22,7 @@
                             <div class="col-6 col-sm-4 box-quantità">
                                 <h6 class="text">@Program.products[i].quantita</h6>
                             </div>
-                            <input type="hidden" name="nomeProd" value="@Program.products[i].nome" />
-                            <input type="hidden" name="quantProd" value="@Program.products[i].quantita" />
+                            <input type="hidden" name="nome" value="@Program.products[i].nome" />
                             <button class="col-12 col-sm-4 btn-restock" type="submit">restock</button>
                         </div>
                     </form>
