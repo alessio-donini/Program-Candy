@@ -1,52 +1,151 @@
-﻿.row-below-first {
-  margin-top: 1% !important;
-}
-.carrello-list {
-  margin-top: 7% !important;
-}
-.img-cart-prod {
-  width: 60%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-.nome-prod-list {
-  line-height: 10vw !important;
+﻿@media screen and (max-width: 400px) {
+  /* <=400 */
 }
 
-.list-item {
-  border-style: solid;
-  border-color: black;
-  border-width: 0 0 1px 0;
-  background-color: #f8f4f0;
-  border-radius: 15px 15px 0 0;
+@media screen and (max-width: 575px) {
+  /* XS */
 }
-.btn-quantita {
-  margin-top: 10% !important;
+
+@media screen and (min-width: 576px) {
+  /* SM */
 }
-.btn-list-carrello {
-  width: 90%;
-  height: 40%;
-  margin-top: 30%;
-  border-radius: 10px !important;
-  background-color: lightgreen !important;
-  border-style: none !important;
+
+@media screen and (min-width: 768px) {
+  /* MD */
 }
-input.carrello-list-quant {
-  background-color: #f8f4f0;
+
+@media screen and (min-width: 992px) {
+  /* LG */
 }
-.rimuovi {
-  margin-top: 65%;
-  width: 50%;
-  color: white;
-  background-color: rgb(221, 80, 80) !important;
-  border-radius: 10px !important;
-  border-style: none !important;
+
+@media screen and (min-width: 1200px) {
+  /* XL */
+  .row-below-first {
+    margin-top: 1% !important;
+  }
+  .carrello-list {
+    margin-top: 10% !important;
+  }
+  hr.separator {
+    border-top: 4px solid #000000 !important;
+    border-radius: 20px;
+    width: 60% !important;
+  }
+  .img-cart-prod {
+    width: 60%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .text-prod-list {
+    line-height: 7vw !important;
+  }
+  .list-item {
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    background-color: #f8f4f0;
+    border-radius: 15px 15px 0 0;
+  }
+  .carrello-tot {
+    background-color: #f7f7f7;
+    border-radius: 15px 15px 0 0;
+  }
+  .btn-quantita {
+    margin-top: 10% !important;
+  }
+  .btn-list-carrello {
+    width: 90%;
+    height: 30%;
+    margin-top: 35%;
+    border-radius: 10px !important;
+    background-color: lightgreen !important;
+    border-style: none !important;
+  }
+  input.carrello-list-quant {
+    background-color: #f8f4f0;
+  }
+  .rimuovi {
+    margin-top: 90%;
+    width: 100%;
+    color: white;
+    background-color: rgb(221, 80, 80) !important;
+    border-radius: 10px !important;
+    border-style: none !important;
+  }
+  .btn-list-carrello-all {
+    width: 50%;
+    border-radius: 10px !important;
+    background-color: lightgreen !important;
+    border-style: none !important;
+    margin-top: 2% !important;
+  }
+  .tot-text {
+    margin-top: 3% !important;
+  }
 }
-.ricarica {
-  margin-top: 10%;
-  width: 50%;
-  color: white;
-  background-color: rgb(145, 208, 216) !important;
-  border-radius: 10px !important;
-  border-style: none !important;
+
+@media screen and (min-width: 1400px) {
+  /* XXL */
+  .row-below-first {
+    margin-top: 1% !important;
+  }
+  .carrello-list {
+    margin-top: 7% !important;
+  }
+  hr.separator {
+    border-top: 4px solid #000000 !important;
+    border-radius: 20px;
+    width: 60% !important;
+  }
+  .img-cart-prod {
+    width: 60%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .text-prod-list {
+    line-height: 10vw !important;
+  }
+  .list-item {
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    background-color: #f8f4f0;
+    border-radius: 15px 15px 0 0;
+  }
+  .carrello-tot {
+    background-color: #f7f7f7;
+    border-radius: 15px 15px 0 0;
+  }
+  .btn-quantita {
+    margin-top: 10% !important;
+  }
+  .btn-list-carrello {
+    width: 90%;
+    height: 40%;
+    margin-top: 30%;
+    border-radius: 10px !important;
+    background-color: lightgreen !important;
+    border-style: none !important;
+  }
+  input.carrello-list-quant {
+    background-color: #f8f4f0;
+  }
+  .rimuovi {
+    margin-top: 70%;
+    width: 85%;
+    color: white;
+    background-color: rgb(221, 80, 80) !important;
+    border-radius: 10px !important;
+    border-style: none !important;
+  }
+  .btn-list-carrello-all {
+    width: 50%;
+    border-radius: 10px !important;
+    background-color: lightgreen !important;
+    border-style: none !important;
+    margin-top: 2% !important;
+  }
+  .tot-text {
+    margin-top: 3% !important;
+  }
 }

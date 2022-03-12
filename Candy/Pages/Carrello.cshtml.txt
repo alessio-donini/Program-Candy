@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model CarrelloModel
 @{
     ViewData["Title"] = "Carrello";
@@ -14,7 +14,8 @@
     {
         if (@Model.action == "compra")
         {
-            await Task.Factory.StartNew(() => CompraItemCarrello(@Model.prod));
+            await Task.Factory.StartNew(() => Program.p.TogliProdotto(@Model.prod.nome, @Model.prod.quantita, ref Program.products,
+            ref Program.modifiedProducts, ref Program.path));
         }
         else if (@Model.action == "elimina")
         {
@@ -25,11 +26,6 @@
         {
             await Task.Factory.StartNew(() => Program.p.ModificaCarrello(@Model.prod.nome, @Model.prod.quantita,
             @Model.prod.prezzo, ref Startup.carrello, "ricarica"));
-        }
-        else if (@Model.action == "compra-tutto")
-        {
-            await Task.Factory.StartNew(() => eliminaTutto(ref Startup.carrello));
-          
         }
     }
     Program.UpdateList();
@@ -47,17 +43,17 @@
                 <div class="row @margin">
                     <div class="col-10 offset-1">
                         <div class="row list-item">
-                            <div class="col-xl-2 col-xxl-3">
+                            <div class="col-3">
                                 <img class="img-fluid img-cart-prod"
                                 src="~/images/@Program.p.FormatCandy(Startup.carrello[i].nome)" />
                             </div>
                             <div class="col-2">
-                                <h3 class="text-prod-list">@Startup.carrello[i].nome</h3>
+                                <h3 class="nome-prod-list">@Startup.carrello[i].nome</h3>
                             </div>
-                            <div class="col-12 col-xxl-7">
-                                <form asp-page="/Carrello" method="post" id="cartForm">
+                            <div class="col-7">
+                                <form asp-page="/Carrello" method="post">
                                     <div class="row">
-                                        <div class="col-xl-3 btn-quantita">
+                                        <div class="col-3 btn-quantita">
                                             <button class="btn btn-primary btn-meno btn-prodotto shadow-none"
                                             type="button submit" name="btn" value="ricarica"
                                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
@@ -74,19 +70,25 @@
                                             <input type="hidden" name="nomeProd" value="@Startup.carrello[i].nome" />
                                             <input type="hidden" name="prezProd" value="@Startup.carrello[i].prezzo" />
                                         </div>
-                                        <div class="col-xl-3">
-                                            <h3 class="text-prod-list">@CalcolaPrezzo(Startup.carrello[i].prezzo,
-                                            Startup.carrello[i].quantita)€</h3>
+                                        <div class="col-3">
+                                            <h3 class="nome-prod-list">@CalcolaPrezzo(Startup.carrello[i].prezzo,
+                                            Startup.carrello[i].quantita).ToString("N2")€</h3>
                                         </div>
-                                        <div class="d-flex col-xl-6 col-xxl-4 justify-content-end">
+                                        <div class=" d-flex col-4 justify-content-end">
                                             <button class="btn btn-primary btn-compra btn-list-carrello shadow-none"
                                             type="submit" name="btn" value="compra">Compra</button>
                                         </div>
-                                        <div class="col-xl-6 col-xxl-2">
-                                            <div class="col-12">
-                                                <button class="rimuovi" type="submit" name="btn" value="elimina">
-                                                    <img class="img-fluid" src="~/images/cestino.png" /></button>
-                                            </div>
+                                        <div class="col-2">
+                                            <!--<div class="row">
+                                                <div class="col-12">
+                                                    <button class="rimuovi" type="submit" name="btn" value="elimina">
+                                                        <img class="img-fluid" src="~/images/cestino.png" /></button>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button class="ricarica" type="submit" name="btn" value="ricarica">
+                                                        <img class="img-fluid" src="~/images/reload.png" /></button>
+                                                </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </form>
@@ -97,51 +99,42 @@
             }
         </div>
         <div class="col-3">
-            <div class="col-11 carrello-tot">
-                <div class="row d-flex justify-content-center">
-                    <h3>Totale Carrello</h3>
-                    <hr class="separator">
-                </div>
-                <div class="row tot-text d-flex justify-content-center">
-                    <div class="col-3">
+            <div class="col-11 item-carrello">
+                <h3>Totale Carrello</h3>
+                <div class="row">
+                    <div class="col-3 justify-content-start">
                         <h3>Totale:</h3>
                     </div>
-                    <div class="col-3">
-                        <h3>@CalcolaTotale(@Startup.carrello)€</h3>
+                    <div class="col-3 justify-content-end">
+                        <h3>@CalcolaTotale(@Startup.carrello).ToString("N2")€</h3>
                     </div>
                 </div>
-                <button class="btn btn-primary btn-compra btn-list-carrello-all shadow-none" type="submit" name="btn"
-                    value="compra-tutto" formtarget="cartForm" >Compra</button>
+                <button class="btn btn-primary btn-compra btn-list-carrello shadow-none" type="submit" name="btn"
+                    value="prova">Compra</button>
             </div>
         </div>
     </div>
 </div>
 @{
-    string CalcolaPrezzo(double prezzo, int quantita)// arrotonda il valore a 2 cifre dopo la virgola
+    double CalcolaPrezzo(double prezzo, int quantita)// arrotonda il valore a 2 cifre dopo la virgola
     {
-        return Math.Round((prezzo * quantita), 2).ToString("N2");
+        return Math.Round((prezzo * quantita), 2);
     }
-    string CalcolaTotale(List<Prodotto> cart)// calcola il prezzo totale del carrello
+    double CalcolaTotale(List<Prodotto> cart)// calcola il prezzo totale del carrello
     {
         double tot = 0;
         for (int i = 0; i < cart.Count; i++)
             tot += Math.Round((cart[i].prezzo * cart[i].quantita), 2);
-        return tot.ToString("N2");
+        return tot;
     }
-    void CompraItemCarrello(Prodotto itemProd)
-    {
-        Program.p.TogliProdotto(itemProd.nome, itemProd.quantita, ref Program.products,
-        ref Program.modifiedProducts, ref Program.path);
-        Program.p.ModificaCarrello(itemProd.nome, itemProd.quantita,
-        itemProd.prezzo, ref Startup.carrello, "elimina");
-    }
-    void eliminaTutto(ref List<Prodotto> cart)
-    {
-        for(int i=0;i<cart.Count;i++)
-        {
-            CompraItemCarrello(cart[i]);
-         }
+}
 
-    }
-
+//STYLE per ricarica btn
+.ricarica {
+  margin-top: 10%;
+  width: 50%;
+  color: white;
+  background-color: rgb(145, 208, 216) !important;
+  border-radius: 10px !important;
+  border-style: none !important;
 }

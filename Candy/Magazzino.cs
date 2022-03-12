@@ -1,6 +1,6 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Candy
@@ -9,6 +9,33 @@ namespace Candy
     {
         public Magazzino()
         {
+        }
+        public void RestockProdotto(string nome, int quantita, ref List<Prodotto> products, ref bool modifiedProducts, ref string path)
+        {
+            if (nome != null)
+            {
+                for (int i = 0; i < products.Count; i++)
+                {
+                    if (products[i].nome == nome)
+                    {
+                        products[i].quantita = 100;
+                        break;
+                    }
+                }
+                List<string> lines = File.ReadAllLines(path).ToList();
+                for (int i = 0; i < lines.Count; i++)
+                {
+                    string[] item = lines[i].Split('|');
+                    if (item[0] == nome)
+                    {
+                        item[1] = "100";
+                        lines[i] = $"{item[0]}|{item[1]}|{item[2]}";
+                        break;
+                    }
+                }
+                modifiedProducts = true;
+                File.WriteAllLines(path, lines);
+            }
         }
         public void TogliProdotto(string nome, int quant, ref List<Prodotto> products, ref bool modifiedProducts, ref string path)
         {
