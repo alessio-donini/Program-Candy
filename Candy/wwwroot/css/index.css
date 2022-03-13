@@ -35,8 +35,8 @@ img {
 }
 
 .slide {
-    background-color: #ffe58f;
-    border-radius: 0 0 0 200px;
+  background-color: #ffe58f;
+  border-radius: 0 0 0 200px;
 }
 
 .slide-text {
@@ -52,7 +52,6 @@ img {
   position: relative;
 }
 
-}
 .carousel-indicators > li {
   border-radius: 50%;
   height: 12px !important;
@@ -60,9 +59,7 @@ img {
 }
 
 .carousel-indicators > li.active {
-  background-color: greenyellow;
-  height: 18px !important;
-  width: 18px !important;
+  background-color: #f37ddd;
 }
 
 .container-slide {
@@ -156,9 +153,9 @@ img {
 }
 
 .box {
-    margin-top: 10%;
-    margin-left: 10%;
-    border-radius: 3vw;
+  margin-top: 10%;
+  margin-left: 10%;
+  border-radius: 3vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -177,16 +174,16 @@ img {
   .detail-text {
     font-size: 2.4vw;
   }
-    .carousel-img {
-        width: 40%;
-        padding-bottom: 0%;
-        margin-top:10px;
-    }
-    .slide2{
-        width: 35%;
-        padding-bottom: 0%;
-        margin-top: 10px;
-    }
+  .carousel-img {
+    width: 40%;
+    padding-bottom: 0%;
+    margin-top: 10px;
+  }
+  .slide2 {
+    width: 35%;
+    padding-bottom: 0%;
+    margin-top: 10px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -239,12 +236,12 @@ img {
     padding-bottom: 5%;
   }
 
-    .slide-text {
-        margin-top: 33%;
-        margin-left: 10%;
-        color: black;
-        font-size: 30px;
-    }
+  .slide-text {
+    margin-top: 33%;
+    margin-left: 10%;
+    color: black;
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 1400px) {

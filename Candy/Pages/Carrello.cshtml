@@ -2,11 +2,6 @@
 @model CarrelloModel
 @{
     ViewData["Title"] = "Carrello";
-    /*for(int i = 0; i < 2; i++)
-    {
-    string ciao = Startup.carrello[i].nome;
-    string prova = Program.p.FormatCandy(Startup.carrello[i].nome);
-    }*/
 }
 @{
     Program.UpdateList();
@@ -28,8 +23,8 @@
         }
         else if (@Model.action == "compra-tutto")
         {
-            await Task.Factory.StartNew(() => eliminaTutto(ref Startup.carrello));
-          
+            await Task.Factory.StartNew(() => EliminaTutto(ref Startup.carrello));
+
         }
     }
     Program.UpdateList();
@@ -47,11 +42,11 @@
                 <div class="row @margin">
                     <div class="col-10 offset-1">
                         <div class="row list-item">
-                            <div class="col-xl-2 col-xxl-3">
+                            <div class="col-xl-4 col-xxl-3">
                                 <img class="img-fluid img-cart-prod"
                                 src="~/images/@Program.p.FormatCandy(Startup.carrello[i].nome)" />
                             </div>
-                            <div class="col-2">
+                            <div class="col-xl-6 col-xxl-2">
                                 <h3 class="text-prod-list">@Startup.carrello[i].nome</h3>
                             </div>
                             <div class="col-12 col-xxl-7">
@@ -74,15 +69,15 @@
                                             <input type="hidden" name="nomeProd" value="@Startup.carrello[i].nome" />
                                             <input type="hidden" name="prezProd" value="@Startup.carrello[i].prezzo" />
                                         </div>
-                                        <div class="col-xl-3">
+                                        <div class="col-xl-2">
                                             <h3 class="text-prod-list">@CalcolaPrezzo(Startup.carrello[i].prezzo,
                                             Startup.carrello[i].quantita)€</h3>
                                         </div>
-                                        <div class="d-flex col-xl-6 col-xxl-4 justify-content-end">
+                                        <div class="d-flex col-xl-3 offset-xl-2 offset-xxl-0 col-xxl-4 justify-content-end">
                                             <button class="btn btn-primary btn-compra btn-list-carrello shadow-none"
                                             type="submit" name="btn" value="compra">Compra</button>
                                         </div>
-                                        <div class="col-xl-6 col-xxl-2">
+                                        <div class="col-xl-1 col-xxl-2">
                                             <div class="col-12">
                                                 <button class="rimuovi" type="submit" name="btn" value="elimina">
                                                     <img class="img-fluid" src="~/images/cestino.png" /></button>
@@ -103,15 +98,15 @@
                     <hr class="separator">
                 </div>
                 <div class="row tot-text d-flex justify-content-center">
-                    <div class="col-3">
+                    <div class="col-6 col-xxl-3">
                         <h3>Totale:</h3>
                     </div>
-                    <div class="col-3">
+                    <div class="col-5 col-xxl-3">
                         <h3>@CalcolaTotale(@Startup.carrello)€</h3>
                     </div>
                 </div>
                 <button class="btn btn-primary btn-compra btn-list-carrello-all shadow-none" type="submit" name="btn"
-                    value="compra-tutto" formtarget="cartForm" >Compra</button>
+                    value="compra-tutto" formtarget="cartForm">Compra</button>
             </div>
         </div>
     </div>
@@ -135,13 +130,12 @@
         Program.p.ModificaCarrello(itemProd.nome, itemProd.quantita,
         itemProd.prezzo, ref Startup.carrello, "elimina");
     }
-    void eliminaTutto(ref List<Prodotto> cart)
+    void EliminaTutto(ref List<Prodotto> cart)
     {
-        for(int i=0;i<cart.Count;i++)
+        for (int i = 0; i < cart.Count; i++)
         {
             CompraItemCarrello(cart[i]);
-         }
+        }
 
     }
-
 }
