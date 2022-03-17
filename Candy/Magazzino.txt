@@ -1,14 +1,14 @@
 Orsetti|100|5,99
-Coccodrilli|100|5,99
-Fragole|100|5,99
+Coccodrilli|89|5,99
+Fragole|87|5,99
 Coca Cole|100|5,99
-Rotelle|100|5,99
-Marshmellow|100|5,99
+Rotelle|97|5,99
+Marshmellow|99|5,99
 Uova|100|5,99
 Angurie|100|5,99
 Cervelli|100|5,99
 Dentiere|100|5,99
-Delfini|100|5,99
+Delfini|99|5,99
 Vermi|100|5,99
 Banane|100|5,99
 Rane|100|5,99
