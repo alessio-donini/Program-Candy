@@ -102,12 +102,12 @@ hr.separator {
   }
   .btn-list-carrello {
     width: 100%;
-    height: 40%;
-    margin-top: 15%;
+    height: 46%;
+    margin-top: 14%;
     border-radius: 10px !important;
   }
   .rimuovi {
-    margin-top: 70%;
+    margin-top: 64%;
     width: 110%;
     border-radius: 10px !important;
   }
@@ -137,7 +137,7 @@ hr.separator {
   }
   .btn-list-carrello {
     width: 100%;
-    margin-top: 30%;
+    margin-top: 37%;
   }
   .rimuovi {
     width: 85%;
