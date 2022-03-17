@@ -29,7 +29,7 @@ namespace Candy
                     if (item[0] == nome)
                     {
                         item[1] = "100";
-                        lines[i] = $"{item[0]}|{item[1]}|{item[2]}";
+                        lines[i] = $"{item[0]}|{item[1]}|{RightPriceOnMac(item[2])}";
                         break;
                     }
                 }
@@ -54,7 +54,7 @@ namespace Candy
                 if (item[0] == nome)
                 {
                     item[1] = (Convert.ToInt32(item[1]) - quant).ToString();
-                    lines[i] = $"{item[0]}|{item[1]}|{item[2]}";
+                    lines[i] = $"{item[0]}|{item[1]}|{RightPriceOnMac(item[2])}";
                     break;
                 }
             }
@@ -103,7 +103,7 @@ namespace Candy
             foreach (string line in lines)
             {
                 string[] item = line.Split('|');
-                products.Add(new Prodotto { nome = item[0], quantita = Convert.ToInt32(item[1]), prezzo = Convert.ToDouble(item[2]) });
+                products.Add(new Prodotto { nome = item[0], quantita = Convert.ToInt32(item[1]), prezzo = Convert.ToDouble(RightPriceOnMac(item[2])) });
             }
             modifiedProducts = false;
         }
@@ -125,6 +125,14 @@ namespace Candy
             }
             candy += ".png";
             return candy;
+        }
+        private string RightPriceOnMac(string old)
+        {
+            if (Program.isWindows)
+            {
+                return old.Replace('.', ','); // il pc è windows
+            }
+            return old.Replace(',', '.'); // il pc non è windows
         }
     }
 }
