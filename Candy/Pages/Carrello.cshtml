@@ -42,17 +42,17 @@
                 <div class="row @margin">
                     <div class="col-10 offset-1">
                         <div class="row list-item">
-                            <div class="col-md-4 col-xxl-3">
+                            <div class="col-sm-6 col-md-4 col-xxl-3">
                                 <img class="img-fluid img-cart-prod"
                                 src="~/images/@Program.p.FormatCandy(Startup.carrello[i].nome)" />
                             </div>
-                            <div class="col-md-6 col-xxl-2">
+                            <div class="col-sm-5 col-md-6 col-xxl-2">
                                 <h3 class="text-prod-list">@Startup.carrello[i].nome</h3>
                             </div>
                             <div class="col-12 col-xxl-7">
                                 <form asp-page="/Carrello" method="post" id="cartForm">
                                     <div class="row">
-                                        <div class="col-md-4 col-lg-3 col-xxl-4 btn-quantita">
+                                        <div class="col-sm-4 col-lg-3 col-xxl-4 btn-quantita">
                                             <button class="btn btn-primary btn-meno btn-prodotto btn-pageCart shadow-none"
                                             type="button submit" name="btn" value="ricarica"
                                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
@@ -69,18 +69,19 @@
                                             <input type="hidden" name="nomeProd" value="@Startup.carrello[i].nome" />
                                             <input type="hidden" name="prezProd" value="@Startup.carrello[i].prezzo" />
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-sm-2">
                                             <h3 class="text-prod-list">@CalcolaPrezzo(Startup.carrello[i].prezzo,
                                             Startup.carrello[i].quantita)€</h3>
                                         </div>
-                                        <div class="d-flex col-md-3 offset-lg-2 offset-xxl-0 col-xxl-3 justify-content-end">
+                                        <div class="d-flex col-sm-3 offset-lg-2 offset-xxl-0 col-xxl-3 justify-content-end">
                                             <button class="btn btn-primary btn-compra btn-list-carrello shadow-none"
                                             type="submit" name="btn" value="compra">Compra</button>
                                         </div>
-                                        <div class="col-md-1 col-xxl-2">
+                                        <div class="col-sm-1 col-xxl-2">
                                             <div class="col-12">
                                                 <button class="rimuovi" type="submit" name="btn" value="elimina">
-                                                    <img class="img-fluid" src="~/images/cestino.png" /></button>
+                                                    <img class="img-fluid img-rimuovi"
+                                                    src="~/images/cestino.png" /></button>
                                             </div>
                                         </div>
                                     </div>
