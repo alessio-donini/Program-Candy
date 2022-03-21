@@ -37,3 +37,8 @@ Footer finito, iniziato il processo di abbellimento del carrello (4/03/2022)
 tolto il tasto ricarica ed è stato sostituito con i tasti "aumenta prodotto" e "togli prodotto" nella schermata del carrello, inoltre è possibile digitando con la tastiera, cambiare il numero di prodotti nel carrello(10/03/2022)
 Iniata la funzione che permette di svuotare il carello una volta che si clicca sul bottone compra(11/03/2022)
 Aggiornato il carosel: modificate immagini, scritte e reso il tutto responsive(12/03/2022)
+aggiornamenti pagina carello(13/03/2022)
+risolto problema con gli schermi xxl e xl, terminbata la funzione compra tutto (nel carello), adattato schermi lg e quasi finito quelli md, inizio schermi small (17/03/2022)
+pagina del carrello adattato a tutti gli schermi(18/03/2022)
+Commentato il codice, ripristinato l'impostazione di accesso per poter ottenere i privilegi di amministratore, risolto un bug il quale permetteva di avere nel carrello più prodotti di quelli che realmente c'erano in magazzino, rimosse delle classi inutilizzate e modificata la funzione "ModificaCarrello"(21/03/2022)
+Progetto terminato
