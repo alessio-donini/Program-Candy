@@ -14,12 +14,12 @@
         else if (@Model.action == "elimina")
         {
             await Task.Factory.StartNew(() => Program.p.ModificaCarrello(@Model.prod.nome, @Model.prod.quantita,
-            @Model.prod.prezzo, ref Startup.carrello, "elimina"));
+            @Model.prod.prezzo, ref Startup.carrello, "elimina", Program.products));
         }
         else if (@Model.action == "ricarica")
         {
             await Task.Factory.StartNew(() => Program.p.ModificaCarrello(@Model.prod.nome, @Model.prod.quantita,
-            @Model.prod.prezzo, ref Startup.carrello, "ricarica"));
+            @Model.prod.prezzo, ref Startup.carrello, "ricarica", Program.products));
         }
         else if (@Model.action == "compra-tutto")
         {
@@ -131,7 +131,7 @@
         Program.p.TogliProdotto(itemProd.nome, itemProd.quantita, ref Program.products,
         ref Program.modifiedProducts, ref Program.path);
         Program.p.ModificaCarrello(itemProd.nome, itemProd.quantita,
-        itemProd.prezzo, ref Startup.carrello, "elimina");
+        itemProd.prezzo, ref Startup.carrello, "elimina", Program.products);
     }
     void EliminaTutto(ref List<Prodotto> cart)
     {

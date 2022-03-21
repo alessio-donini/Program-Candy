@@ -9,7 +9,7 @@ namespace Candy
 {
     public class Startup
     {
-        public static bool adminRole = true;
+        public static bool adminRole = false;
         public static List<Prodotto> carrello = new List<Prodotto>();
         public Startup(IConfiguration configuration)
         {

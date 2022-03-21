@@ -1,5 +1,5 @@
 Orsetti|95|5,99
-Coccodrilli|87|5,99
+Coccodrilli|8|5,99
 Fragole|87|5,99
 Coca Cole|100|5,99
 Rotelle|97|5,99
