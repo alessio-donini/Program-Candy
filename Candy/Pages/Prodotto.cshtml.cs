@@ -17,11 +17,11 @@ namespace Candy.Pages
         {
             this.idProdotto = id;
         }
-        public void GetProductData()
+        public void GetProductData()//ottiene i dati di un determinato prodotto
         {
-            for(int i = 0; i < Program.products.Count; i++)
+            for (int i = 0; i < Program.products.Count; i++)
             {
-                if(Program.products[i].nome == idProdotto)
+                if (Program.products[i].nome == idProdotto)
                 {
                     quant = Program.products[i].quantita;
                     prez = Program.products[i].prezzo;
@@ -29,7 +29,7 @@ namespace Candy.Pages
                 }
             }
         }
-        public int GetValue()
+        public int GetValue()//serve solo per inizializzare la quantità nella pagina
         {
             if (quant == 0)
                 return 0;

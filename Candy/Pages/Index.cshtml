@@ -15,7 +15,7 @@
         else if (@Model.action == "carrello")
         {
             await Task.Factory.StartNew(() => Program.p.ModificaCarrello(@Model.prod.nome, @Model.prod.quantita,
-            @Model.prod.prezzo, ref Startup.carrello, "aggiungi"));
+            @Model.prod.prezzo, ref Startup.carrello, "aggiungi", Program.products));
         }
     }
     Program.UpdateList();

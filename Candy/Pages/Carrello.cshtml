@@ -14,12 +14,12 @@
         else if (@Model.action == "elimina")
         {
             await Task.Factory.StartNew(() => Program.p.ModificaCarrello(@Model.prod.nome, @Model.prod.quantita,
-            @Model.prod.prezzo, ref Startup.carrello, "elimina"));
+            @Model.prod.prezzo, ref Startup.carrello, "elimina", Program.products));
         }
         else if (@Model.action == "ricarica")
         {
             await Task.Factory.StartNew(() => Program.p.ModificaCarrello(@Model.prod.nome, @Model.prod.quantita,
-            @Model.prod.prezzo, ref Startup.carrello, "ricarica"));
+            @Model.prod.prezzo, ref Startup.carrello, "ricarica", Program.products));
         }
         else if (@Model.action == "compra-tutto")
         {
@@ -31,7 +31,7 @@
 }
 <div class="text-center">
     <div class="row carrello-list">
-        <div class="col-9">
+        <div class="col-8 col-md-9">
             @for (int i = 0; i < @Startup.carrello.Count; i++)
             {
                 string margin = null;
@@ -42,17 +42,17 @@
                 <div class="row @margin">
                     <div class="col-10 offset-1">
                         <div class="row list-item">
-                            <div class="col-md-4 col-xxl-3">
+                            <div class="col-sm-6 col-md-4 col-xxl-3">
                                 <img class="img-fluid img-cart-prod"
                                 src="~/images/@Program.p.FormatCandy(Startup.carrello[i].nome)" />
                             </div>
-                            <div class="col-md-6 col-xxl-2">
-                                <h3 class="text-prod-list">@Startup.carrello[i].nome</h3>
+                            <div class="col-sm-5 col-md-6 col-xxl-2">
+                                <h3 class="text-prod-list title-text-cart">@Startup.carrello[i].nome</h3>
                             </div>
                             <div class="col-12 col-xxl-7">
                                 <form asp-page="/Carrello" method="post" id="cartForm">
                                     <div class="row">
-                                        <div class="col-md-4 col-lg-3 col-xxl-4 btn-quantita">
+                                        <div class="col-sm-5 offset-sm-1 offset-md-0 col-lg-3 col-xxl-4 btn-quantita">
                                             <button class="btn btn-primary btn-meno btn-prodotto btn-pageCart shadow-none"
                                             type="button submit" name="btn" value="ricarica"
                                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
@@ -69,18 +69,21 @@
                                             <input type="hidden" name="nomeProd" value="@Startup.carrello[i].nome" />
                                             <input type="hidden" name="prezProd" value="@Startup.carrello[i].prezzo" />
                                         </div>
-                                        <div class="col-md-2">
-                                            <h3 class="text-prod-list">@CalcolaPrezzo(Startup.carrello[i].prezzo,
+                                        <div class="col-sm-2 offset-sm-1 offset-md-0">
+                                            <h3 class="text-prod-list price-text-cart">
+                                                @CalcolaPrezzo(Startup.carrello[i].prezzo,
                                             Startup.carrello[i].quantita)€</h3>
                                         </div>
-                                        <div class="d-flex col-md-3 offset-lg-2 offset-xxl-0 col-xxl-3 justify-content-end">
+                                        <div
+                                        class="d-flex col-sm-5 offset-sm-1 offset-md-0 col-md-3 offset-lg-2 offset-xxl-0 col-xxl-3 justify-content-end">
                                             <button class="btn btn-primary btn-compra btn-list-carrello shadow-none"
                                             type="submit" name="btn" value="compra">Compra</button>
                                         </div>
-                                        <div class="col-md-1 col-xxl-2">
+                                        <div class="col-sm-2 col-md-1 offset-sm-1 offset-md-0 col-xxl-2">
                                             <div class="col-12">
                                                 <button class="rimuovi" type="submit" name="btn" value="elimina">
-                                                    <img class="img-fluid" src="~/images/cestino.png" /></button>
+                                                    <img class="img-fluid img-rimuovi"
+                                                    src="~/images/cestino.png" /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -91,17 +94,17 @@
                 </div>
             }
         </div>
-        <div class="col-3">
+        <div class="col-4 col-md-3">
             <div class="col-11 carrello-tot">
                 <div class="row d-flex justify-content-center">
                     <h3>Totale Carrello</h3>
                     <hr class="separator">
                 </div>
                 <div class="row tot-text d-flex justify-content-center">
-                    <div class="col-6 col-xxl-3">
+                    <div class="col-12 col-sm-6 col-xxl-3">
                         <h3>Totale:</h3>
                     </div>
-                    <div class="col-5 col-xxl-3">
+                    <div class="col-12 col-sm-5 col-xxl-3">
                         <h3>@CalcolaTotale(@Startup.carrello)€</h3>
                     </div>
                 </div>
@@ -128,7 +131,7 @@
         Program.p.TogliProdotto(itemProd.nome, itemProd.quantita, ref Program.products,
         ref Program.modifiedProducts, ref Program.path);
         Program.p.ModificaCarrello(itemProd.nome, itemProd.quantita,
-        itemProd.prezzo, ref Startup.carrello, "elimina");
+        itemProd.prezzo, ref Startup.carrello, "elimina", Program.products);
     }
     void EliminaTutto(ref List<Prodotto> cart)
     {
