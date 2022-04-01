@@ -9,7 +9,7 @@
 }
 <div class="text-center adm-page">
     <div class="container">
-        @for (int i = 0; i < @Program.products.Count; i++)
+        @for (int i = 0; i < @Program.products.Count; i++)//crea n righe in base a n prodotti
         {
             <div class="row">
                 <div class="col-10 offset-1 box-container">
@@ -31,7 +31,7 @@
         }
     </div>
     <span>
-        <form asp-page="/Index" asp-page-handler="Exit" class="form-signout" method="post">
+        <form asp-page="/Index" asp-page-handler="Exit" class="form-signout" method="post"> <!--logout-->
             <button class="btn btn-primary btn1" type="submit" onclick="Exit">Esci</button>
         </form>
     </span>
